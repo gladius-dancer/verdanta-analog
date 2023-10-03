@@ -1,0 +1,30 @@
+
+.InputFile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.InputFile img{
+    border: 1px #000 solid;
+}
+
+.InputFile input {
+    display: none;
+}
+
+.InputFile label {
+    height: 30px;
+    width: 230px;
+    background: silver;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    line-height: 2;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.InputFile label:hover {
+    background: #8c8a8a;
+}

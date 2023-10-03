@@ -1,0 +1,30 @@
+.LoginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    min-width: 260px;
+    max-width: 350px;
+    border-radius: 10px;
+
+}
+
+.LoginFormHeader{
+    font-family: Arial, sans-serif;
+}
+
+.inputText{
+    background: #ffffff;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.inputPassword{
+    background: #ffffff;
+    width: 260px;
+}
+
+.loginButton{
+    width: 100%;
+}

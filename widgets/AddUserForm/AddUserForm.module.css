@@ -1,0 +1,10 @@
+.AddUser{
+    padding: 20px;
+    width: 400px;
+}
+
+.AddUserBody{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

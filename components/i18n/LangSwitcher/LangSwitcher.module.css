@@ -1,0 +1,24 @@
+.LangSwitcher {
+  cursor: pointer;
+  display: flex;
+  gap: 15px;
+}
+.LangSwitcher button {
+  font-size: 14px;
+  color: black;
+}
+
+.LangSwitcher button:nth-child(2)::before {
+  content: "";
+  height: 20px;
+  width: 1px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -7px;
+}
+
+.active {
+  background: rgba(157, 152, 152, 0.17);
+}

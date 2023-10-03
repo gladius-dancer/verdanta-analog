@@ -1,0 +1,19 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header  h3{
+    margin: 0;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.UsersTable{
+    padding-top: 30px;
+}

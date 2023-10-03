@@ -1,0 +1,27 @@
+.roomSlider{
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 130px);
+}
+
+.bannerItem{
+    height: calc(100vh - 130px);
+}
+
+.bannerHeader{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.bannerHeader h2{
+    font-size: 80px;
+    color: #ffffff;
+}
+
+.bannerHeader p{
+    font-size: 18px;
+    color: #ffffff!important;
+}

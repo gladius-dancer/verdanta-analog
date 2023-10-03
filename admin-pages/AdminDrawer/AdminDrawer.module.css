@@ -1,0 +1,54 @@
+.Nav{
+    width: 300px;
+    height: 100vh;
+}
+
+.ListItem{
+    display: block;
+    width: 100%;
+}
+
+.ListItem a{
+    text-decoration: none!important;
+    color: #0a0a0a;
+    width: 100%;
+}
+
+.Active{
+    background: rgba(222, 220, 220, 0.45) !important;
+}
+
+
+.UserInfo{
+    position: absolute;
+    right: 20px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.UserInfo:hover .UserInfoPopup{
+    min-height: 60px;
+    padding: 20px;
+}
+
+.UserInfoPopup{
+    position: absolute;
+    top: calc(100% - 5px);
+    right: 0;
+    min-width: 150px;
+    background: #fff;
+    color: #000;
+    height: 0!important;
+    overflow: hidden!important;
+}
+
+.activePopup{
+
+
+}
+
+.PopupItem{
+    cursor: pointer;
+}
