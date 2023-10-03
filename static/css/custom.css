@@ -2,6 +2,17 @@
     display: none;
 }
 
-@media screen {
-    
+@media only screen and (max-width: 991px) {
+    .mean-bar{
+        display: block;
+    }
+}
+
+.mean-container{
+    overflow-y: hidden;
+}
+
+.bend{
+    max-height: 780px;
+    overflow: hidden;
 }

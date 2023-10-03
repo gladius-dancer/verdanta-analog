@@ -1,93 +1,145 @@
-"use client";
-
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
 function Footer() {
   const { t } = useTranslation();
   return (
-    <footer className="site-footer light-color">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-5 col-md-3 col-lg-4">
-            <div className="site-logo">
-              <Link href="/">
-                <span>Massaget</span>
-              </Link>
-            </div>
-            <div className="widget widget_black_studio_tinymce">
-              <div className="textwidget">
-                <p
-                  style={{ fontSize: "14px", lineHeight: "17px" }}
-                  suppressHydrationWarning
-                >
-                  {t(
-                    `We support programs that create advancement opportunities for people.`,
-                  )}
-                </p>
-              </div>
-            </div>
-            <div className="social-links-widget widget">
-              <div className="social-links">
-                <div
-                  className="label"
-                  style={{ fontFamily: "lato, sans-serif" }}
-                  suppressHydrationWarning
-                >
-                  {t("Follow us")}:
+    <footer>
+      <section className="footer-top-wrap">
+        <div className="container">
+          <div className="row">
+            <div className="single-item col-lg-3 col-md-6 col-12">
+              <div className="footer-box">
+                <div className="footer-logo">
+                  <a href="/">
+                    <img
+                      src="../static/images/logo.png"
+                      className="img-fluid"
+                      alt="footer-logo"
+                    />
+                  </a>
                 </div>
-                <Link href="/">
-                  <i className="base-icon-facebook"></i>
-                </Link>
-                <Link href="/">
-                  <i className="base-icon-instagram"></i>
-                </Link>
-                <Link href="/">
-                  <i className="fab fa-telegram"></i>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4 col-md-3">
-            <div className="widget_text widget widget_custom_html">
-              <h6 className="widget-title" suppressHydrationWarning>
-                {t("Address")}
-              </h6>
-              <div className="textwidget custom-html-widget">
-                <div className="contact-item">
-                  <div className="value" suppressHydrationWarning>
-                    {t("Nukus city")}, <br /> {t("J.Aymurzayev Street 47a")}
-                    <br />
-                    <label suppressHydrationWarning>{t("Open")}:</label> 24/7
-                  </div>
+                <div className="footer-contact-info">
+                  <ul>
+                    <li>
+                      <i className="fas fa-map-marker-alt"></i>
+                      <a href="/contact">ул. Маннон Уйгур, дом 290.</a>
+                    </li>
+                    <li>
+                      <i className="fas fa-phone"></i>
+                      <a href="tel: +99871 249 66 33         +99871 249 66 77">
+                        +99871 249 66 33 +99871 249 66 77
+                      </a>
+                    </li>
+                    <li>
+                      <i className="far fa-envelope"></i>
+                      <a href="mailto:admin@vedanta.uz">admin@vedanta.uz</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-12 col-sm-3 col-md-3 col-lg-2">
-            <div className="widget_text widget widget_custom_html">
-              <h6 className="widget-title" suppressHydrationWarning>
-                {t("Contact us")}
-              </h6>
-              <div className="textwidget contacts-list custom-html-widget">
-                <div className="value">
-                  +998(61) 222-87-66
-                  <br />
-                  +998(93) 614-51-00
-                  <br />
-                  +998(61) 222-50-01 (fax)
-                  <br />
-                  massagethotel@mail.ru
-                  <br />
+            <div className="single-item col-lg-3 col-md-6 col-12">
+              <div className="footer-box">
+                <div className="footer-header">
+                  <h3>Ссылки </h3>
+                </div>
+                <div className="footer-departments">
+                  <ul>
+                    <li>
+                      <a href="">О клинике </a>
+                    </li>
+                    <li>
+                      <a href="https://vedanta.corporate.uz/doctors">Врачи </a>
+                    </li>
+                    <li>
+                      <a href="https://vedanta.corporate.uz/tools">
+                        Оборудование{" "}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://vedanta.corporate.uz/news">Новости </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="single-item col-lg-3 col-md-6 col-12">
+              <div className="footer-box">
+                <div className="footer-header">
+                  <h3>Услуги</h3>
+                </div>
+                <div className="footer-quick-link">
+                  <ul>
+                    <li>
+                      <a href="https://vedanta.corporate.uz/services/obsledovanie/">
+                        Обследование{" "}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://vedanta.corporate.uz/services/operativnoe-lechenie/">
+                        Оперативное лечение{" "}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://vedanta.corporate.uz/services/vitreoretinalnaya-hirurgiya/">
+                        Хирургия{" "}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">Диагностика </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="single-item col-lg-3 col-md-6 col-12">
+              <div className="footer-box">
+                <div className="footer-header">
+                  <h3>Рабочее время</h3>
+                </div>
+                <div className="footer-opening-hours">
+                  <ul>
+                    <li>Пн.-Пт. 09:00 - 17:00. Сб. 09:00 - 14:00.</li>
+                    <li>Закрыто: Воскресенье</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="footer-bottom">
-          <div className="left-text">© 2023, Powered by RT</div>
+      </section>
+      <section className="footer-center-wrap">
+        <div className="container">
+          <div className="row no-gutters">
+            <div className="col-lg-4 col-12">
+              <div className="footer-social">
+                <ul>
+                  <li>Мы в социальных сетях</li>
+                  <li>
+                    <a href="https://www.facebook.com/Vedantamedical/">
+                      <i className="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/vedanta_uz/">
+                      <i className="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+      <section className="footer-bottom-wrap">
+        <div className="copyright">
+          © 2023. Все права защищены. Разработка сайта{" "}
+          <a className="footer-light" href="https://light.uz">
+            Softium
+          </a>
+        </div>
+      </section>
     </footer>
   );
 }

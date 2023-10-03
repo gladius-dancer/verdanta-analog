@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
 import LangSwitcher from "@/components/i18n/LangSwitcher/LangSwitcher";
@@ -35,6 +35,10 @@ function Navbar() {
   const toggleMobileInfo = () => {
     setMobileInfo((prev) => !prev);
   };
+
+  useEffect(() => {
+    const header = document.getElementById("header_2");
+  }, []);
 
   return (
     <>

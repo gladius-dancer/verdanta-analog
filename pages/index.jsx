@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import MainController from "@/components/MainController";
 import Navbar from "@/components/Navbar/Navbar";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { A11y, Autoplay, EffectFade, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const Index = () => {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -9,68 +15,86 @@ const Index = () => {
   }, []);
   return (
     <MainController>
-      <Navbar />
       {/* Slider Area Start Here */}
       <div className="slider-area slider-layout2 bg-light-primary100 slider-top-margin2">
-        <div className="bend niceties preview-1">
-          <div id="ensign-nivoslider-1" className="slides">
-            <img
-              src="../static/images/laser-eye-surgery-what-you-need-to-know.jpeg"
-              alt="slider"
-              title="#slider-direction-1"
-            />
-            <img
-              src="../static/images/3872170.png"
-              alt="slider"
-              title="#slider-direction-2"
-            />
-          </div>
-          <div id="slider-direction-1" className="t-cn slider-direction">
-            <div className="slider-content s-tb slide-1">
-              <div className="text-left title-container s-tb-c">
-                <div className="container">
-                  <div className="text-box">
-                    <div className="slider-big-text">
-                      VEDANTA
-                      <span>
-                        {" "}
-                        Офтальмологический центр доктора <br /> Акшей Кхера{" "}
-                      </span>
-                    </div>
-                    <p className="slider-paragraph"></p>
-                    <p>Искусство возвращать зрение</p>
-                    <p></p>
-                    <div className="slider-btn-area">
-                      <a href="/about" className="item-btn">
-                        Подробно<i className="fas fa-chevron-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="slider-direction-2" className="t-cn slider-direction">
-            <div className="slider-content s-tb slide-2">
-              <div className="text-left title-container s-tb-c">
-                <div className="container">
-                  <div className="text-box">
-                    <div className="slider-big-text">
-                      VEDANTA<span> Искусство возвращать зрение </span>
-                    </div>
-                    <p className="slider-paragraph"></p>
-                    <p>Офтальмологический центр доктора Акшей Кхера</p>
-                    <p></p>
-                    <div className="slider-btn-area">
-                      <a href="/about" className="item-btn">
-                        Подробно<i className="fas fa-chevron-right"></i>
-                      </a>
+        <div className="bend">
+          <Swiper
+            modules={[Navigation, A11y, EffectFade, Autoplay]}
+            spaceBetween={30}
+            slidesPerGroup={1}
+            effect={"fade"}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            slidesPerView={1}
+            navigation={{
+              prevEl: ".prev-service",
+              nextEl: ".next-service",
+            }}
+          >
+            <SwiperSlide>
+              <img
+                src="../static/images/laser-eye-surgery-what-you-need-to-know.jpeg"
+                alt="slider"
+                title="#slider-direction-1"
+              />
+              <div id="slider-direction-1" className="t-cn slider-direction">
+                <div className="slider-content s-tb slide-1">
+                  <div className="text-left title-container s-tb-c">
+                    <div className="container">
+                      <div className="text-box">
+                        <div className="slider-big-text">
+                          VEDANTA
+                          <span>
+                            {" "}
+                            Офтальмологический центр доктора <br /> Акшей Кхера{" "}
+                          </span>
+                        </div>
+                        <p className="slider-paragraph"></p>
+                        <p>Искусство возвращать зрение</p>
+                        <p></p>
+                        <div className="slider-btn-area">
+                          <a href="/about" className="item-btn">
+                            Подробно<i className="fas fa-chevron-right"></i>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="../static/images/3872170.png"
+                alt="slider"
+                title="#slider-direction-2"
+              />
+              <div id="slider-direction-2" className="t-cn slider-direction">
+                <div className="slider-content s-tb slide-2">
+                  <div className="text-left title-container s-tb-c">
+                    <div className="container">
+                      <div className="text-box">
+                        <div className="slider-big-text">
+                          VEDANTA<span> Искусство возвращать зрение </span>
+                        </div>
+                        <p className="slider-paragraph"></p>
+                        <p>Офтальмологический центр доктора Акшей Кхера</p>
+                        <p></p>
+                        <div className="slider-btn-area">
+                          <a href="/about" className="item-btn">
+                            Подробно<i className="fas fa-chevron-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
       {/* Slider Area End Here */}
@@ -359,7 +383,37 @@ const Index = () => {
               </span>
             </div>
           </div>
-          <div className="rc-carousel nav-control-layout2">
+          <div
+            className="rc-carousel nav-control-layout2"
+            data-loop="true"
+            data-items="5"
+            data-margin="30"
+            data-autoplay="false"
+            data-autoplay-timeout="5000"
+            data-custom-nav="#owl-nav2"
+            data-smart-speed="2000"
+            data-dots="false"
+            data-nav="false"
+            data-nav-speed="false"
+            data-r-x-small="1"
+            data-r-x-small-nav="true"
+            data-r-x-small-dots="false"
+            data-r-x-medium="2"
+            data-r-x-medium-nav="false"
+            data-r-x-medium-dots="false"
+            data-r-small="2"
+            data-r-small-nav="false"
+            data-r-small-dots="false"
+            data-r-medium="3"
+            data-r-medium-nav="false"
+            data-r-medium-dots="false"
+            data-r-large="3"
+            data-r-large-nav="false"
+            data-r-large-dots="false"
+            data-r-extra-large="4"
+            data-r-extra-large-nav="false"
+            data-r-extra-large-dots="false"
+          >
             <div className="team-box-layout2">
               <div className="item-img">
                 <img
@@ -866,171 +920,6 @@ const Index = () => {
         </div>
       </section>
       {/* Brand Area End Here */} {/* Footer Area Start Here */}
-      <footer>
-        <section className="footer-top-wrap">
-          <div className="container">
-            <div className="row">
-              <div className="single-item col-lg-3 col-md-6 col-12">
-                <div className="footer-box">
-                  <div className="footer-logo">
-                    <a href="/">
-                      <img
-                        src="../static/images/logo.png"
-                        className="img-fluid"
-                        alt="footer-logo"
-                      />
-                    </a>
-                  </div>
-                  <div className="footer-contact-info">
-                    <ul>
-                      <li>
-                        <i className="fas fa-map-marker-alt"></i>
-                        <a href="/contact">ул. Маннон Уйгур, дом 290.</a>
-                      </li>
-                      <li>
-                        <i className="fas fa-phone"></i>
-                        <a href="tel: +99871 249 66 33         +99871 249 66 77">
-                          +99871 249 66 33 +99871 249 66 77
-                        </a>
-                      </li>
-                      <li>
-                        <i className="far fa-envelope"></i>
-                        <a href="mailto:admin@vedanta.uz">admin@vedanta.uz</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="single-item col-lg-3 col-md-6 col-12">
-                <div className="footer-box">
-                  <div className="footer-header">
-                    <h3>Ссылки </h3>
-                  </div>
-                  <div className="footer-departments">
-                    <ul>
-                      <li>
-                        <a href="">О клинике </a>
-                      </li>
-                      <li>
-                        <a href="https://vedanta.corporate.uz/doctors">
-                          Врачи{" "}
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://vedanta.corporate.uz/tools">
-                          Оборудование{" "}
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://vedanta.corporate.uz/news">Новости </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="single-item col-lg-3 col-md-6 col-12">
-                <div className="footer-box">
-                  <div className="footer-header">
-                    <h3>Услуги</h3>
-                  </div>
-                  <div className="footer-quick-link">
-                    <ul>
-                      <li>
-                        <a href="https://vedanta.corporate.uz/services/obsledovanie/">
-                          Обследование{" "}
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://vedanta.corporate.uz/services/operativnoe-lechenie/">
-                          Оперативное лечение{" "}
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://vedanta.corporate.uz/services/vitreoretinalnaya-hirurgiya/">
-                          Хирургия{" "}
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">Диагностика </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="single-item col-lg-3 col-md-6 col-12">
-                <div className="footer-box">
-                  <div className="footer-header">
-                    <h3>�&nbsp;абочее время</h3>
-                  </div>
-                  <div className="footer-opening-hours">
-                    <ul>
-                      <li>Пн.-Пт. 09:00 - 17:00. Сб. 09:00 - 14:00.</li>
-                      <li>Закрыто: Воскресенье</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="footer-center-wrap">
-          <div className="container">
-            <div className="row no-gutters">
-              <div className="col-lg-4 col-12">
-                <div className="footer-social">
-                  <ul>
-                    <li>Мы в социальных сетях</li>
-                    <li>
-                      <a href="https://www.facebook.com/Vedantamedical/">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/vedanta_uz/">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-8 col-12">
-                <div className="row">
-                  <div className="col-md-6 col-12">
-                    <div className="newsletter-title">
-                      <h4 className="item-title">Подписка новостям </h4>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-12">
-                    <div className="newsletter-form">
-                      <div className="input-group stylish-input-group">
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Email"
-                        />
-                        <span className="input-group-addon">
-                          <button type="submit">
-                            <span aria-hidden="true">Подписаться</span>
-                          </button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="footer-bottom-wrap">
-          <div className="copyright">
-            © 2020. Все права защищены. Разработка сайта{" "}
-            <a className="footer-light" href="https://light.uz">
-              Light Solutions
-            </a>
-          </div>
-        </section>
-      </footer>
-      {/* Footer Area End Here */}
     </MainController>
   );
 };
