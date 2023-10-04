@@ -1,15 +1,75 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MainController from "@/components/MainController";
-import Navbar from "@/components/Navbar/Navbar";
+import DoctorsSlider from "@/components/DoctorsSlider/DoctorsSlider";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Autoplay, EffectFade, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "swiper/css/free-mode";
+import "swiper/css/thumbs";
+import {
+  A11y,
+  Autoplay,
+  EffectFade,
+  FreeMode,
+  Navigation,
+  Thumbs,
+} from "swiper/modules";
+import Slider from "react-slick";
+import Brands from "@/components/Brands/Brands";
+import Comments from "@/components/Comments/Comments";
 
 const Index = () => {
   const [domLoaded, setDomLoaded] = useState(false);
+  const mainSliderRef = useRef();
+  const syncedSliderRef = useRef();
+
+  const mainAfterChange = (currentSlide) => {
+    syncedSliderRef.current.slickGoTo(currentSlide);
+  };
+
+  const navAfterChange = (currentSlide) => {
+    mainSliderRef.current.slickGoTo(currentSlide);
+  };
+
+  let syncSlider1 = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    centerMode: true,
+    spaceBetween: 5,
+    centerPadding: 10,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: 5,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          centerPadding: 0,
+        },
+      },
+    ],
+  };
+  let syncSlider2 = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  };
+
   useEffect(() => {
     setDomLoaded(true);
   }, []);
@@ -171,35 +231,53 @@ const Index = () => {
             <h2>Услуги</h2>
             <p></p>
           </div>
-          <div id="slick-carousel-wrap" className="departments-box-layout3">
-            <div className="nav-wrap carousel-nav">
-              <div className="nav-item">
-                <i className="flaticon-eye"></i>Лазерная коррекция
+
+          <div className="departments-box-layout3">
+            <Slider
+              {...syncSlider1}
+              ref={(slider) => (syncedSliderRef.current = slider)}
+              afterChange={navAfterChange}
+              className="nav-wrap carousel-nav"
+            >
+              <div className="main-nav-item">
+                <i className="flaticon-eye"></i>
+                <span>Лазерная коррекция</span>
               </div>
-              <div className="nav-item">
-                <i className="flaticon-eye"></i>Оперативное лечение
+              <div className="main-nav-item">
+                <i className="flaticon-eye"></i>
+                <span>Оперативное лечение</span>
               </div>
-              <div className="nav-item">
-                <i className="flaticon-eye"></i>Обследование
+              <div className="main-nav-item">
+                <i className="flaticon-eye"></i>
+                <span>Обследование</span>
               </div>
-              <div className="nav-item">
-                <i className="flaticon-eye"></i>Витреоретинальная хирургия
+              <div className="main-nav-item">
+                <i className="flaticon-eye"></i>
+                <span>Витреоретинальная хирургия</span>
               </div>
-              <div className="nav-item">
-                <i className="flaticon-eye"></i>Консультация офтальмолога
+              <div className="main-nav-item">
+                <i className="flaticon-eye"></i>
+                <span>Консультация офтальмолога</span>
               </div>
-              <div className="nav-item">
-                <i className="flaticon-eye"></i>Диагностика
+              <div className="main-nav-item">
+                <i className="flaticon-eye"></i>
+                <span>Диагностика</span>
               </div>
-            </div>
-            <div className="carousel-content">
+            </Slider>
+
+            <Slider
+              {...syncSlider2}
+              ref={(slider) => (mainSliderRef.current = slider)}
+              afterChange={mainAfterChange}
+              className="carousel-content"
+            >
               <div className="single-item">
                 <div className="media media-none--lg">
                   <div className="item-img">
                     <img
                       src="../static/images/0g7a1497.jpg"
                       alt="department"
-                      className="img-fluid"
+                      className="carousel-img-fluid"
                     />
                   </div>
                   <div className="media-body">
@@ -223,7 +301,7 @@ const Index = () => {
                     <img
                       src="../static/images/20230315-145850.jpg"
                       alt="department"
-                      className="img-fluid"
+                      className="carousel-img-fluid"
                     />
                   </div>
                   <div className="media-body">
@@ -247,7 +325,7 @@ const Index = () => {
                     <img
                       src="../static/images/dpp-0069.jpg"
                       alt="department"
-                      className="img-fluid"
+                      className="carousel-img-fluid"
                     />
                   </div>
                   <div className="media-body">
@@ -268,7 +346,7 @@ const Index = () => {
                     <img
                       src="../static/images/0g7a1473.jpg"
                       alt="department"
-                      className="img-fluid"
+                      className="carousel-img-fluid"
                     />
                   </div>
                   <div className="media-body">
@@ -292,7 +370,7 @@ const Index = () => {
                     <img
                       src="../static/images/dpp-0021.jpg"
                       alt="department"
-                      className="img-fluid"
+                      className="carousel-img-fluid"
                     />
                   </div>
                   <div className="media-body">
@@ -316,7 +394,7 @@ const Index = () => {
                     <img
                       src="../static/images/0g7a1394.jpg"
                       alt="department"
-                      className="img-fluid"
+                      className="carousel-img-fluid"
                     />
                   </div>
                   <div className="media-body">
@@ -331,7 +409,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Slider>
           </div>
         </div>
       </section>
@@ -369,285 +447,10 @@ const Index = () => {
       </section>
       {/* Progress Area End Here */}
       {/* Team Area Start Here */}
-      <section className="team-wrap-layout1 bg-light-secondary100">
-        <div className="container">
-          <div className="section-heading heading-dark text-left heading-layout1">
-            <h2>Наши врачи </h2>
-            <p></p>
-            <div id="owl-nav2" className="owl-nav-layout1">
-              <span className="rt-prev">
-                <i className="fas fa-chevron-left"></i>
-              </span>
-              <span className="rt-next">
-                <i className="fas fa-chevron-right"></i>
-              </span>
-            </div>
-          </div>
-          <div
-            className="rc-carousel nav-control-layout2"
-            data-loop="true"
-            data-items="5"
-            data-margin="30"
-            data-autoplay="false"
-            data-autoplay-timeout="5000"
-            data-custom-nav="#owl-nav2"
-            data-smart-speed="2000"
-            data-dots="false"
-            data-nav="false"
-            data-nav-speed="false"
-            data-r-x-small="1"
-            data-r-x-small-nav="true"
-            data-r-x-small-dots="false"
-            data-r-x-medium="2"
-            data-r-x-medium-nav="false"
-            data-r-x-medium-dots="false"
-            data-r-small="2"
-            data-r-small-nav="false"
-            data-r-small-dots="false"
-            data-r-medium="3"
-            data-r-medium-nav="false"
-            data-r-medium-dots="false"
-            data-r-large="3"
-            data-r-large-nav="false"
-            data-r-large-dots="false"
-            data-r-extra-large="4"
-            data-r-extra-large-nav="false"
-            data-r-extra-large-dots="false"
-          >
-            <div className="team-box-layout2">
-              <div className="item-img">
-                <img
-                  src="../static/images/0g7a1583.jpg"
-                  alt="Team1"
-                  className="img-fluid rounded-circle"
-                />
-                <ul className="item-icon">
-                  <li>
-                    <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
-                      <i className="fas fa-plus"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="item-content">
-                <h4 className="item-title">
-                  <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
-                    Главный офтальмохирург - Акшей Кхера
-                  </a>
-                </h4>
-                <p></p>
-                <a
-                  href="/doctors/glavnii-oftalmohirurg-akshei-khera/"
-                  className="item-btn"
-                >
-                  Подробно{" "}
-                </a>
-              </div>
-            </div>
-            <div className="team-box-layout2">
-              <div className="item-img">
-                <img
-                  src="../static/images/0g7a1555.jpg"
-                  alt="Team1"
-                  className="img-fluid rounded-circle"
-                />
-                <ul className="item-icon">
-                  <li>
-                    <a href="/doctors/abdullaeva-nodira-bahtiyarovna/">
-                      <i className="fas fa-plus"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="item-content">
-                <h4 className="item-title">
-                  <a href="/doctors/abdullaeva-nodira-bahtiyarovna/">
-                    Абдуллаева Нодира Бахтияровна
-                  </a>
-                </h4>
-                <p></p>
-                <a
-                  href="/doctors/abdullaeva-nodira-bahtiyarovna/"
-                  className="item-btn"
-                >
-                  Подробно{" "}
-                </a>
-              </div>
-            </div>
-            <div className="team-box-layout2">
-              <div className="item-img">
-                <img
-                  src="../static/images/0g7a1408.jpg"
-                  alt="Team1"
-                  className="img-fluid rounded-circle"
-                />
-                <ul className="item-icon">
-                  <li>
-                    <a href="/doctors/nizamhodzhaev-sharofiddin/">
-                      <i className="fas fa-plus"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="item-content">
-                <h4 className="item-title">
-                  <a href="/doctors/nizamhodzhaev-sharofiddin/">
-                    Низамходжаев Шарофиддин
-                  </a>
-                </h4>
-                <p></p>
-                <a
-                  href="/doctors/nizamhodzhaev-sharofiddin/"
-                  className="item-btn"
-                >
-                  Подробно{" "}
-                </a>
-              </div>
-            </div>
-            <div className="team-box-layout2">
-              <div className="item-img">
-                <img
-                  src="../static/images/0g7a1412.jpg"
-                  alt="Team1"
-                  className="img-fluid rounded-circle"
-                />
-                <ul className="item-icon">
-                  <li>
-                    <a href="/doctors/samandarov-dilmurod/">
-                      <i className="fas fa-plus"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="item-content">
-                <h4 className="item-title">
-                  <a href="/doctors/samandarov-dilmurod/">
-                    Самандаров Дильмурод
-                  </a>
-                </h4>
-                <p></p>
-                <a href="/doctors/samandarov-dilmurod/" className="item-btn">
-                  Подробно{" "}
-                </a>
-              </div>
-            </div>
-            <div className="team-box-layout2">
-              <div className="item-img">
-                <img
-                  src="../static/images/photo-2021-12-15-14-14-08.jpg"
-                  alt="Team1"
-                  className="img-fluid rounded-circle"
-                />
-                <ul className="item-icon">
-                  <li>
-                    <a href="/doctors/niezmetov-noufar-norimboevich/">
-                      <i className="fas fa-plus"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="item-content">
-                <h4 className="item-title">
-                  <a href="/doctors/niezmetov-noufar-norimboevich/">
-                    Ниезметов Ноуфар Норимбоевич
-                  </a>
-                </h4>
-                <p></p>
-                <a
-                  href="/doctors/niezmetov-noufar-norimboevich/"
-                  className="item-btn"
-                >
-                  Подробно{" "}
-                </a>
-              </div>
-            </div>
-            <div className="team-box-layout2">
-              <div className="item-img">
-                <img
-                  src="../static/images/0g7a1419.jpg"
-                  alt="Team1"
-                  className="img-fluid rounded-circle"
-                />
-                <ul className="item-icon">
-                  <li>
-                    <a href="/doctors/abdurahmanova-umida-muhammadzhanovna/">
-                      <i className="fas fa-plus"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="item-content">
-                <h4 className="item-title">
-                  <a href="/doctors/abdurahmanova-umida-muhammadzhanovna/">
-                    Абдурахманова Умида Мухаммаджановна
-                  </a>
-                </h4>
-                <p></p>
-                <a
-                  href="/doctors/abdurahmanova-umida-muhammadzhanovna/"
-                  className="item-btn"
-                >
-                  Подробно{" "}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DoctorsSlider />
       {/* Team Area End Here */}
       {/* Testimonial Area Start Here */}
-      <section
-        className="testmonial-wrap-layout2 bg-common"
-        data-bg-image="/templates/vedanta/assets/img/testimonial/testimonial-bg1.jpg"
-      >
-        <div className="container">
-          <div className="rc-carousel dot-control-layout2">
-            <div className="testmonial-box-layout1">
-              <div className="item-img">
-                <img
-                  src="../static/images/b055eef2455bc9cddec6994e8160c3ba.jpg"
-                  className="img-fulid rounded-circle"
-                  alt="Robert Addison"
-                />
-              </div>
-              <div className="item-content">
-                <p style={{ textAlign: "justify" }}>
-                  Хотела бы оставить отзыв о клинике Vedanta и выразить огромную
-                  благодарность докторам данной Клиники за внимательное
-                  отношение , доброту и очень грамотный подход. Нас тепло
-                  встретили, проконсультировали и лечили. За время пребывания в
-                  клинике у нас было все необходимое , мед.персонал отзывчивый.
-                  Огромное спасибо доктору Акшей Кхера - очень грамотный доктор.
-                </p>
-                <h3 className="item-title">Халилова К.Н.</h3>
-                <h4 className="sub-title"></h4>
-              </div>
-            </div>
-            <div className="testmonial-box-layout1">
-              <div className="item-img">
-                <img
-                  src="../static/images/f267de58275174af61b8944a09db282b.jpg"
-                  className="img-fulid rounded-circle"
-                  alt="Robert Addison"
-                />
-              </div>
-              <div className="item-content">
-                <p style={{ textAlign: "justify" }}>
-                  Понравилось, что проводят именно комплексную диагностику глаз.
-                  Глазное дно смотрят, проверяют давление, остроту зрения, есть
-                  для этого вся аппаратура и знаний у врача достаточно. Не
-                  жалею, что решила провериться, с врачом долго разговаривали,
-                  мне объясняли результаты и дали много ценных
-                  советов.�&nbsp;Vedanta - это действительно высокий уровень и
-                  профессионализм врачей. Мы остались очень довольны.
-                </p>
-                <h3 className="item-title">Нарбаева Н.А.</h3>
-                <h4 className="sub-title"></h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Comments />
       {/* Testimonial Area End Here */}
       {/* Gallery Area Start Here */}
       <section className="gallery-wrap-layout1 bg-accent100">
@@ -871,55 +674,9 @@ const Index = () => {
       </section>
       {/* Blog-Area End Here */}
       {/* Brand Area Start Here */}
-      <section className="brand-wrap-layout2 bg-light-primary100">
-        <div className="container">
-          <div className="rc-carousel nav-control-layout4">
-            <div className="brand-box-layout3">
-              <img
-                src="../static/images/logo_1.png"
-                alt="brand"
-                className="img-fluid"
-              />
-            </div>
-            <div className="brand-box-layout3">
-              <img
-                src="../static/images/unnamed-1.jpg"
-                alt="brand"
-                className="img-fluid"
-              />
-            </div>
-            <div className="brand-box-layout3">
-              <img
-                src="../static/images/download.png"
-                alt="brand"
-                className="img-fluid"
-              />
-            </div>
-            <div className="brand-box-layout3">
-              <img
-                src="../static/images/huvitz.png"
-                alt="brand"
-                className="img-fluid"
-              />
-            </div>
-            <div className="brand-box-layout3">
-              <img
-                src="../static/images/bauschlomblogo-no-tagline.jpg"
-                alt="brand"
-                className="img-fluid"
-              />
-            </div>
-            <div className="brand-box-layout3">
-              <img
-                src="../static/images/logosonomed.png"
-                alt="brand"
-                className="img-fluid"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Brand Area End Here */} {/* Footer Area Start Here */}
+      <Brands />
+      {/* Brand Area End Here */}
+      {/* Footer Area Start Here */}
     </MainController>
   );
 };

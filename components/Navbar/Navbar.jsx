@@ -75,7 +75,7 @@ function Navbar() {
               <a href="javascript:void(0)">О клинике</a>
               <ul className="dropdown-menu-col-1" style={{ display: "none" }}>
                 <li>
-                  <a href="/about">О нас</a>
+                  <Link href="/about">О нас</Link>
                 </li>
               </ul>
               <a className="mean-expand" href="#" style={{ fontSize: "18px" }}>
@@ -83,16 +83,16 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="/doctors">Врачи</a>
+              <Link href="/doctors">Врачи</Link>
             </li>
             <li>
               <a href="javascript:void(0)">Услуги</a>
               <ul className="dropdown-menu-col-1" style={{ display: "none" }}>
                 <li>
-                  <a href="/services">Все услуги </a>
+                  <Link href="/services">Все услуги </Link>
                 </li>
                 <li>
-                  <a href="/price-list">Прейскурант услуг</a>
+                  <Link href="/price-list">Прейскурант услуг</Link>
                 </li>
               </ul>
               <a className="mean-expand" href="#" style={{ fontSize: "18px" }}>
@@ -100,16 +100,16 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="/tools">Оборудование</a>
+              <Link href="/tools">Оборудование</Link>
             </li>
             <li>
               <a href="javascript:void(0)">Пресс центр</a>
               <ul className="dropdown-menu-col-1" style={{ display: "none" }}>
                 <li>
-                  <a href="/news">Новости</a>
+                  <Link href="/news">Новости</Link>
                 </li>
                 <li>
-                  <a href="/gallery">Фотогалерея</a>
+                  <Link href="/gallery">Фотогалерея</Link>
                 </li>
               </ul>
               <a className="mean-expand" href="#" style={{ fontSize: "18px" }}>
@@ -117,7 +117,7 @@ function Navbar() {
               </a>
             </li>
             <li className="mean-last">
-              <a href="/contact">Контакты</a>
+              <Link href="/contact">Контакты</Link>
             </li>
           </ul>
         </nav>
@@ -306,50 +306,7 @@ function Navbar() {
                         </form>
                       </li>
                       <li className="cart-area-dark">
-                        <a className="cart-trigger-icon">
-                          <img
-                            style={{ borderRadius: "50%" }}
-                            src="../static/images/100x100-russia-flag.png"
-                            alt="product"
-                            className="img-fluid"
-                          />
-                        </a>
-                        <div className="cart-items">
-                          <div className="cart-item">
-                            <div className="cart-img">
-                              <a href="/?lang_is=set&amp;lang_data=%D0%8E%D0%B7%D0%B1%D0%B5%D0%BA%D1%87%D0%B0">
-                                <img
-                                  style={{ borderRadius: "50%" }}
-                                  src="../static/images/100x100-flag-uzbekistan.gif"
-                                  alt="product"
-                                  className="img-fluid"
-                                />
-                              </a>
-                            </div>
-                            <div className="cart-title">
-                              <a href="/?lang_is=set&amp;lang_data=%D0%8E%D0%B7%D0%B1%D0%B5%D0%BA%D1%87%D0%B0">
-                                O`Z
-                              </a>
-                            </div>
-                          </div>
-                          <div className="cart-item">
-                            <div className="cart-img">
-                              <a href="/?lang_is=set&amp;lang_data=English">
-                                <img
-                                  style={{ borderRadius: "50%" }}
-                                  src="../static/images/100x100-flag-england.png"
-                                  alt="product"
-                                  className="img-fluid"
-                                />
-                              </a>
-                            </div>
-                            <div className="cart-title">
-                              <a href="/?lang_is=set&amp;lang_data=English">
-                                EN
-                              </a>
-                            </div>
-                          </div>
-                        </div>
+                        <LangSwitcher />
                       </li>
                     </ul>
                   </div>

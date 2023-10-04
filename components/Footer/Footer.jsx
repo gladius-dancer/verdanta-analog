@@ -50,7 +50,9 @@ function Footer() {
                       <a href="">О клинике </a>
                     </li>
                     <li>
-                      <a href="https://vedanta.corporate.uz/doctors">Врачи </a>
+                      <a href="https://vedanta.corporate.uz/doctorsSlider">
+                        Врачи{" "}
+                      </a>
                     </li>
                     <li>
                       <a href="https://vedanta.corporate.uz/tools">

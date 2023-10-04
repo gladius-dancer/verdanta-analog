@@ -16,3 +16,116 @@
     max-height: 780px;
     overflow: hidden;
 }
+
+.swiper-slide{
+    margin: 0!important;
+}
+
+.main-nav-item{
+    width: 195px;
+    height: 155px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex!important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-nav-item i:before{
+    margin: 0;
+    font-size: 60px;
+    color: #396cf0;
+}
+
+.departments-box-layout3 .slick-current .main-nav-item{
+    background: #396cf0;
+    color: #fff;
+}
+
+.departments-box-layout3 .slick-current .main-nav-item i:before{
+    background: #396cf0;
+    color: #fff;
+}
+
+.single-item img{
+    height: auto;
+    width: 100%;
+}
+
+.departments-box-layout3{
+    max-height: 850px;
+}
+
+.departments-box-layout3 .slick-next{
+    z-index: 100;
+    border: 1px #396cf0 solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right: -50px;
+}
+
+.team-wrap-layout1 .slick-next{
+    z-index: 100;
+    border: 1px #396cf0 solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right: 0;
+    top: -60px;
+}
+
+.departments-box-layout3 .slick-prev{
+    z-index: 100;
+    border: 1px #396cf0 solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: -50px;
+    color: #396cf0;
+}
+
+.team-wrap-layout1 .slick-prev{
+    z-index: 100;
+    border: 1px #396cf0 solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: calc(100% - 120px);
+    top: -60px;
+    color: #396cf0;
+}
+
+.departments-box-layout3 .slick-prev:after, .team-wrap-layout1 .slick-prev:after{
+    content: "";
+    display:block;
+    background: url(../icons/chevron-left-solid.svg) no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.departments-box-layout3 .slick-next:after, .team-wrap-layout1 .slick-next:after{
+    content: "";
+    display:block;
+    background: url(../icons/chevron-right-solid.svg) no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 620px){
+    .departments-box-layout3 .slick-next, .departments-box-layout3 .slick-prev{
+        display: none!important;
+    }
+}
+
