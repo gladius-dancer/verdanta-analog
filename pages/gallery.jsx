@@ -1,16 +1,9 @@
 import MainController from "@/components/MainController";
-import Navbar from "@/components/Navbar/Navbar";
-import NewsBanner from "@/components/NewsBanner/NewsBanner";
-import Footer from "@/components/Footer/Footer";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
 
-const News = () => {
+const Gallery = () => {
+  const { t } = useTranslation();
   const [domLoaded, setDomLoaded] = useState(false);
 
   useEffect(() => {
@@ -40,7 +33,7 @@ const News = () => {
                     <a href="javascript:void(0)">Пресс центр</a>
                   </li>
                   <li>
-                    <a href="/about">Новости</a>
+                    <a href="/about">Фотогалерея</a>
                   </li>
                 </ul>
               </div>
@@ -265,4 +258,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Gallery;
