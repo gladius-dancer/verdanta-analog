@@ -166,99 +166,6 @@ function AdminDrawer() {
         <Divider />
         <List>
           <ListItem
-            key="orders"
-            disablePadding
-            className={classNames(
-              cls.ListItem,
-              router.pathname === "/admin/orders" ? cls.Active : "",
-            )}
-          >
-            <Link href={"/admin/orders"}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  <ListAltIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>
-                  Заявки
-                </ListItemText>
-              </ListItemButton>
-            </Link>
-          </ListItem>
-          <ListItem
-            key="plans"
-            disablePadding
-            className={classNames(
-              cls.ListItem,
-              router.pathname === "/admin/plans" ? cls.Active : "",
-            )}
-          >
-            <Link href={"/admin/plans"}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  <InsertChartOutlinedIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>
-                  Тарифы
-                </ListItemText>
-              </ListItemButton>
-            </Link>
-          </ListItem>
-          <ListItem
-            key="rooms"
-            disablePadding
-            className={classNames(
-              cls.ListItem,
-              router.pathname === "/admin/rooms" ? cls.Active : "",
-            )}
-          >
-            <Link href={"/admin/rooms"}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  <ChairIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>
-                  Комнаты
-                </ListItemText>
-              </ListItemButton>
-            </Link>
-          </ListItem>
-          <ListItem
             key="news"
             disablePadding
             className={classNames(
@@ -285,37 +192,6 @@ function AdminDrawer() {
                 </ListItemIcon>
                 <ListItemText sx={{ opacity: open ? 1 : 0 }}>
                   Новости
-                </ListItemText>
-              </ListItemButton>
-            </Link>
-          </ListItem>
-          <ListItem
-            key="banners"
-            disablePadding
-            className={classNames(
-              cls.ListItem,
-              router.pathname === "/admin/banners" ? cls.Active : "",
-            )}
-          >
-            <Link href={"/admin/banners"}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  <ViewCarouselIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ opacity: open ? 1 : 0 }}>
-                  Баннеры
                 </ListItemText>
               </ListItemButton>
             </Link>

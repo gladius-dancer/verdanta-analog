@@ -37,7 +37,7 @@ const LoginForm = () => {
 
   useEffect(() => {
     if (isAuth) {
-      router.push("/admin/orders");
+      router.push("/admin/news");
     }
   }, [isAuth]);
 
