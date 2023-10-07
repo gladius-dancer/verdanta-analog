@@ -51,7 +51,7 @@ function Navbar() {
             <img
               src="../static/images/logo.png"
               alt="logo"
-              className="img-fluid"
+              className="img-fluid logo-mobile"
             />
           </a>
         </div>
@@ -185,12 +185,15 @@ function Navbar() {
           <div className="header-top-bar top-bar-border-bottom bg-light-primary100 d-none d-md-block">
             <div className="container">
               <div className="row">
-                <div className="col-lg-3 col-md-3 logo-area-layout2">
+                <div
+                  className="col-lg-3 col-md-3 logo-area-layout2"
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
                   <a href="/" className="temp-logo">
                     <img
                       src="../static/images/logo.png"
                       alt="logo"
-                      className="img-fluid"
+                      className="img-fluid logo"
                     />
                   </a>
                 </div>

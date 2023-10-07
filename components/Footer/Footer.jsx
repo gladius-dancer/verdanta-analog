@@ -10,11 +10,14 @@ function Footer() {
           <div className="row">
             <div className="single-item col-lg-3 col-md-6 col-12">
               <div className="footer-box">
-                <div className="footer-logo">
+                <div
+                  className="footer-logo"
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
                   <a href="/">
                     <img
                       src="../static/images/logo.png"
-                      className="img-fluid"
+                      className="img-fluid logo"
                       alt="footer-logo"
                     />
                   </a>

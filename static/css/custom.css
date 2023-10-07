@@ -8,6 +8,19 @@
     }
 }
 
+.logo-mobile{
+    width: 100px!important;
+    height: auto;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 150px!important;
+    height: auto;
+    margin: 0 auto;
+
+}
+
 .mean-container{
     overflow-y: hidden;
 }
