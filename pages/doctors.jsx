@@ -5,7 +5,6 @@ import "swiper/css/scrollbar";
 import { useTranslation } from "next-i18next";
 import { useEffect, useRef, useState } from "react";
 import MainController from "@/components/MainController";
-import DoctorsSlider from "@/components/DoctorsSlider/DoctorsSlider";
 
 const Doctors = () => {
   const { t } = useTranslation();
