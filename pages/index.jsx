@@ -468,7 +468,7 @@ const Index = () => {
           </div>
           <div className="isotope-wrap">
             <div className="row featuredContainer zoom-gallery">
-              {gallery.map((item, key) => (
+              {gallery?.map((item, key) => (
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={key}>
                   <div className="gallery-box-layout1">
                     <img src={item.image} alt="gallery" className="img-fluid" />

@@ -39,10 +39,10 @@ const Contact = () => {
           <div className="google-map-area">
             <div id="googleMap" style={{ width: "100%", height: "496px" }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.090144002028!2d69.21513322925748!3d41.32277200587641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bed491fbfb7%3A0x1a6b03a4c374ee51!2sAyziya%20Medical!5e0!3m2!1sen!2s!4v1577535775412!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5886.357767470758!2d59.58783290472412!3d42.46648400000012!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDI3JzU5LjMiTiA1OcKwMzUnMzQuMyJF!5e0!3m2!1sen!2s!4v1704630183076!5m2!1sen!2s"
                 frameborder="0"
                 style={{ border: 0, width: "100%", height: "100%" }}
-                allowfullscreen=""
+                allowFullScreen=""
               ></iframe>
             </div>
           </div>

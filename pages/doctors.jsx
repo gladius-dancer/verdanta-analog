@@ -70,7 +70,7 @@ const Doctors = () => {
         <div className="container">
           <div className="isotope-wrap" style={{ marginTop: 50 }}>
             <div className="row featuredContainer" id="no-equal-gallery">
-              {doctors.map((doctor, key) => (
+              {doctors?.map((doctor, key) => (
                 <div
                   className="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12"
                   key={key}
