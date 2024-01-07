@@ -36,14 +36,11 @@ const News = () => {
             <div className="col-12">
               <div className="breadcrumbs-area">
                 <h1>
-                  <a href="/">Ayziya</a>
+                  <Link href="/">Ayziya</Link>
                 </h1>
                 <ul>
                   <li>
-                    <a href="javascript:void(0)">Пресс центр</a>
-                  </li>
-                  <li>
-                    <a href="/news">Новости</a>
+                    <Link href="/news">Новости</Link>
                   </li>
                 </ul>
               </div>

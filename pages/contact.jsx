@@ -1,10 +1,55 @@
 import MainController from "@/components/MainController";
-import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { Controller, useForm } from "react-hook-form";
+import * as yup from "yup";
+import { CreateAppointmentService } from "@/services/appointment/appointment";
+import { useDispatch } from "react-redux";
+import Link from "next/link";
 
 const Contact = () => {
-  const { t } = useTranslation();
   const [domLoaded, setDomLoaded] = useState(false);
+  const dispatch = useDispatch();
+
+  const schema = yup.object().shape({
+    first_name: yup.string().required("Имя обязательно"),
+    last_name: yup.string().required("Фамилия обязательно"),
+    phone: yup.string().required("Телефон обязательно"),
+    date_time: yup.string().required("Дата и времия обязательно"),
+    comment: yup.string(),
+  });
+
+  const methods = useForm({ resolver: yupResolver(schema) });
+
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { errors },
+  } = methods;
+
+  const onSubmit = (data) => {
+    const formData = {
+      first_name: data?.first_name,
+      last_name: data?.last_name,
+      phone: data?.phone,
+      appointment_date: new Date(data.date_time)
+        ?.toLocaleDateString()
+        .split(".")
+        .reverse()
+        .join("-"),
+      appointment_time: new Date(data.date_time)
+        ?.toLocaleTimeString()
+        .slice(0, 5),
+      comment: data?.comment,
+    };
+
+    console.log(formData);
+
+    dispatch(CreateAppointmentService(formData)).then(() => {
+      reset();
+    });
+  };
 
   useEffect(() => {
     setDomLoaded(true);
@@ -26,8 +71,13 @@ const Contact = () => {
             <div className="col-12">
               <div className="breadcrumbs-area">
                 <h1>
-                  <a href="/">Ayziya</a>
+                  <Link href="/">Ayziya</Link>
                 </h1>
+                <ul>
+                  <li>
+                    <Link href="/contact">Контакты</Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -39,8 +89,7 @@ const Contact = () => {
           <div className="google-map-area">
             <div id="googleMap" style={{ width: "100%", height: "496px" }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5886.357767470758!2d59.58783290472412!3d42.46648400000012!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDI3JzU5LjMiTiA1OcKwMzUnMzQuMyJF!5e0!3m2!1sen!2s!4v1704630183076!5m2!1sen!2s"
-                frameborder="0"
+                src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5886.378604723188!2d59.59291837301637!3d42.46626239735101!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDI3JzU5LjMiTiA1OcKwMzUnMzQuMyJF!5e0!3m2!1sen!2s!4v1704636601539!5m2!1sen!2s"
                 style={{ border: 0, width: "100%", height: "100%" }}
                 allowFullScreen=""
               ></iframe>
@@ -52,66 +101,76 @@ const Contact = () => {
                 <h3 className="title title-bar-primary4">Запись на приём</h3>
                 <form
                   className="contact-form-box"
-                  id="contact-form"
-                  action="javascript:void(0)"
+                  onSubmit={handleSubmit(onSubmit)}
                 >
                   <div className="row">
                     <div className="col-md-6 form-group">
                       <input
+                        {...register("first_name")}
                         type="text"
                         placeholder="Имя"
                         className="form-control"
-                        name="first_name"
-                        data-error="Phone field is required"
-                        required=""
                       />
-                      <div className="help-block with-errors"></div>
+                      <div className="help-block with-errors">
+                        {errors.first_name?.message && (
+                          <span>{errors.first_name?.message}</span>
+                        )}
+                      </div>
                     </div>
                     <div className="col-md-6 form-group">
                       <input
+                        {...register("last_name")}
                         type="text"
                         placeholder="Фамилия"
                         className="form-control"
-                        name="last_name"
-                        data-error="E-mail field is required"
-                        required=""
                       />
-                      <div className="help-block with-errors"></div>
+                      <div className="help-block with-errors">
+                        {errors.last_name?.message && (
+                          <span>{errors.last_name?.message}</span>
+                        )}
+                      </div>
                     </div>
                     <div className="col-md-6 form-group">
                       <input
-                        type="email"
-                        placeholder="Email"
-                        className="form-control"
-                        name="email"
-                        data-error="Subject field is required"
-                        required=""
-                      />
-                      <div className="help-block with-errors"></div>
-                    </div>
-                    <div className="col-md-6 form-group">
-                      <input
+                        {...register("phone")}
                         type="text"
                         placeholder="Телефон"
                         className="form-control"
-                        name="phone"
-                        data-error="Subject field is required"
-                        required=""
                       />
-                      <div className="help-block with-errors"></div>
+                      <div className="help-block with-errors">
+                        {errors.phone?.message && (
+                          <span>{errors.phone?.message}</span>
+                        )}
+                      </div>
                     </div>
+                    <div className="col-md-6 form-group">
+                      <input
+                        {...register("date_time")}
+                        type="datetime-local"
+                        placeholder="Дата и времия"
+                        className="form-control"
+                      />
+                      <div className="help-block with-errors">
+                        {errors.date_time?.message && (
+                          <span>{errors.date_time?.message}</span>
+                        )}
+                      </div>
+                    </div>
+
                     <div className="col-12 form-group">
                       <textarea
-                        placeholder=""
+                        {...register("comment")}
+                        placeholder="Комментария"
                         className="textarea form-control"
-                        name="message"
                         id="form-message"
                         rows="7"
                         cols="20"
-                        data-error="Message field is required"
-                        required=""
                       ></textarea>
-                      <div className="help-block with-errors"></div>
+                      <div className="help-block with-errors">
+                        {errors.comment?.message && (
+                          <span>{errors.comment?.message}</span>
+                        )}
+                      </div>
                     </div>
                     <div className="col-12 form-group margin-b-none">
                       <button type="submit" className="item-btn">
@@ -121,7 +180,7 @@ const Contact = () => {
                     <div className="col-12 form-group margin-b-none">
                       <a
                         id="success"
-                        href="javascript:void(0)"
+                        href=""
                         className="item-btn"
                         style={{ display: "none" }}
                       >

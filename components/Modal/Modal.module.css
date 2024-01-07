@@ -5,7 +5,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    background: #fff;
 }
 
 .Close{
@@ -13,4 +12,44 @@
     z-index: 10000;
     right: 20px;
     top: 20px;
+}
+
+
+.ModalContainer{
+    width: 800px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ModalContainer{
+        width: 600px;
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+}
+@media only screen and (max-width: 608px) {
+    .ModalContainer{
+        width: 500px;
+        margin: 0 auto;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 508px) {
+    .ModalContainer{
+        width: 400px;
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 408px) {
+    .ModalContainer{
+        width: 320px;
+        margin: 0 auto;
+        padding: 5px;
+    }
 }

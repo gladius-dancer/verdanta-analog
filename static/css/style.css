@@ -1740,7 +1740,7 @@ ul {
   display: block;
   clear: both;
 }
-.mean-container .mean-nav > ul li a {
+.mean-container .mean-nav > ul li a, .mean-container .mean-nav > ul li span {
   font-size: 14px;
   color: #111111;
   font-weight: 700;
@@ -6633,10 +6633,6 @@ div ~ :last-child .call-to-action-box-layout5 {
   position: relative;
 }
 
-.departments-box-layout3 .slick-list{
-  padding-left: 12px;
-}
-
 .departments-box-layout3 .nav-wrap {
   margin-bottom: 26px;
   width: 100%;
@@ -6719,9 +6715,9 @@ div ~ :last-child .call-to-action-box-layout5 {
 .departments-box-layout3 .single-item .media .item-img {
   overflow: hidden;
   -webkit-clip-path: ellipse(75% 75% at 25% 50%);
-  clip-path: ellipse(75% 75% at 25% 50%);
-  height: 600px;
-  width: 60%;
+  clip-path: ellipse(75% 90% at 25% 50%);
+  height: 438px;
+  width: 70%;
 }
 @media only screen and (max-width: 1399px) {
   .departments-box-layout3 .single-item .media .item-img {
@@ -6740,10 +6736,12 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .departments-box-layout3 .single-item .media .media-body {
   padding: 5rem;
+  margin-left: 0!important;
 }
 @media only screen and (max-width: 1399px) {
   .departments-box-layout3 .single-item .media .media-body {
     padding: 2rem;
+    margin-left: 0!important;
   }
 }
 @media only screen and (max-width: 1199px) {

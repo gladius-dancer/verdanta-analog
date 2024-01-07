@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import Link from "next/link";
 
 let doctorsSlider = {
   infinite: true,
@@ -49,25 +50,20 @@ function DoctorsSlider({ doctors }) {
 
                   <ul className="item-icon">
                     <li>
-                      <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                      <Link href={`/doctor/${doctor?.id}`}>
                         <i className="fas fa-plus"></i>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
                 <div className="item-content">
                   <h4 className="item-title">
-                    <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
-                      {doctor?.name}
-                    </a>
+                    <Link href={`/doctor/${doctor?.id}`}>{doctor?.name}</Link>
                   </h4>
                   <p></p>
-                  <a
-                    href="/doctors/glavnii-oftalmohirurg-akshei-khera/"
-                    className="item-btn"
-                  >
-                    Подробно{" "}
-                  </a>
+                  <Link href={`/doctor/${doctor?.id}`} className="item-btn">
+                    Подробно
+                  </Link>
                 </div>
               </div>
             </div>

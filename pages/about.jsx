@@ -9,12 +9,19 @@ import Brands from "@/components/Brands/Brands";
 import Comments from "@/components/Comments/Comments";
 import Slider from "react-slick";
 import DoctorsSlider from "@/components/DoctorsSlider/DoctorsSlider";
+import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { GetDoctorsService } from "@/services/doctors/GetDoctorsService";
+import { useMediaQuery } from "@mui/material";
 
 const About = () => {
   const { t } = useTranslation();
   const [domLoaded, setDomLoaded] = useState(false);
   const mainSliderRef = useRef();
   const syncedSliderRef = useRef();
+  const dispatch = useDispatch();
+  const doctors = useSelector((state) => state?.doctors?.doctors);
+  const isSmallerScreen = useMediaQuery("(max-width:991px)");
 
   const mainAfterChange = (currentSlide) => {
     syncedSliderRef.current.slickGoTo(currentSlide);
@@ -30,6 +37,7 @@ const About = () => {
 
   useEffect(() => {
     setDomLoaded(true);
+    dispatch(GetDoctorsService());
   }, []);
 
   return (
@@ -49,14 +57,11 @@ const About = () => {
               <div className="col-12">
                 <div className="breadcrumbs-area">
                   <h1>
-                    <a href="/">Ayziya</a>
+                    <Link href="/">Ayziya</Link>
                   </h1>
                   <ul>
                     <li>
-                      <a href="javascript:void(0)">О клинике</a>
-                    </li>
-                    <li>
-                      <a href="/about">История</a>
+                      <Link href="">О клинике</Link>
                     </li>
                   </ul>
                 </div>
@@ -73,16 +78,16 @@ const About = () => {
                 afterChange={navAfterChange}
                 {...settings}
               >
-                <div className="nav-item">
+                <div className="">
                   <img
-                    src="../static/images/0g7a1488.jpg"
+                    src="../static/images/ayziya/C14A0998-min.jpg"
                     alt="brand"
                     className="img-fluid"
                   />
                 </div>
-                <div className="nav-item">
+                <div className="">
                   <img
-                    src="../static/images/0g7a1427.jpg"
+                    src="../static/images/ayziya/C14A0847-min.jpg"
                     alt="brand"
                     className="img-fluid"
                   />
@@ -126,32 +131,44 @@ const About = () => {
           <div className="container">
             <div className="row">
               <div className="about-box-layout11 col-lg-7 col-12">
-                <h2 className="item-title">Доктор Акшей Кхера</h2>
+                <h2 className="item-title">Доктор Руслан Султанов</h2>
                 <div className="sub-title">
                   <p></p>
-                  <p style={{ textAlign: "justify" }}>
-                    Офтальмологическая клиника Ayziya предлагает
-                    квалифицированную медицинскую помощь по индивидуальным
-                    лечебным и профилактическим программам, призванным
-                    заботиться о Вашем зрении. Мы используем наиболее
-                    современное, соответствующее мировым стандартам,
-                    оборудование для диагностики и лечения заболеваний глаз.
+                  <p style={{ textAlign: "justify", fontSize: 20 }}>
+                    Офтальмохирург. Врач высшей Категории. Закончил НФ
+                    Ташкентского Педиатрического Медицинского Института в 2008
+                    году. - Проходил клиническую ординатуру по специальности
+                    Офтальмология в 2008-2010 году на базе ТАШПМИ. г. Ташкент. -
+                    С 2010 по 2011 году работал ассистентом кафедры
+                    офтальмологии НФ ТАШПМИ. - С 2011 году по сей день работает
+                    офтальмологом в Республиканской Офтальмологической Больнице
+                    с 2021 г в ККФ РСНПМЦМГ. - Неоднократно проходил курсы на
+                    базе кафедры глазных болезней Таш ИУВ. - В 2012-2020 году
+                    работал заведующий поликлиникой в РОБ. - В 2017-2022 году
+                    работал заведующий операционным блоком в РОБ. - В 2013 году
+                    проходил WETLAB на тему Современные аспекты хирургии
+                    катаракты. Факоэмульсификация катаракты г. Астана - В 2015
+                    году проходил цикл Факоэмульсификация катаракты г. Сеул
+                    Южная Корея, Siloam Eye Hospital. - Ежегодно участвовал в
+                    Международных Конгрессе и Конференциях. - С 2023 году
+                    работает в Глазной Клинике Айзия.
                   </p>
                   <p></p>
                 </div>
               </div>
               <div className="about-box-layout12 col-lg-5 col-12">
                 <img
-                  src="../static/images/0g7a1584.jpg"
+                  src="../static/images/ayziya/C14A1029-min2.jpg"
                   alt="about"
                   className="img-fluid"
+                  style={{ marginTop: isSmallerScreen ? 0 : 136 }}
                 />
               </div>
             </div>
           </div>
         </section>
-        <DoctorsSlider />
-        <Comments />
+        <DoctorsSlider doctors={doctors} />
+        {/*<Comments />*/}
         <Brands />
       </MainController>
     </>

@@ -4,6 +4,7 @@ import { ToastComponent } from "@/components/Toast/ui/ToastComponent";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import Loader from "@/components/Loader/Loader";
 
 function MainController({ children, keywords }) {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -53,6 +54,7 @@ function MainController({ children, keywords }) {
           {children}
           <Footer />
           <ToastComponent />
+          <Loader />
         </div>
       )}
     </>

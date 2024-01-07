@@ -1,6 +1,7 @@
 import MainController from "@/components/MainController";
 import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Tools = () => {
   const { t } = useTranslation();
@@ -26,14 +27,14 @@ const Tools = () => {
             <div className="col-12">
               <div className="breadcrumbs-area">
                 <h1>
-                  <a href="/">Ayziya</a>
+                  <Link href="/">Ayziya</Link>
                 </h1>
                 <ul>
                   <li>
-                    <a href="javascript:void(0)">О клинике</a>
+                    <Link href="/about">О клинике</Link>
                   </li>
                   <li>
-                    <a href="/about">История</a>
+                    <Link href="/tools">Оборудование</Link>
                   </li>
                 </ul>
               </div>

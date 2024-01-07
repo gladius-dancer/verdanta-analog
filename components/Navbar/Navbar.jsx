@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [mobileInfo, setMobileInfo] = useState(false);
+  const [services, setServices] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenu((prev) => !prev);
@@ -15,6 +16,10 @@ function Navbar() {
 
   const toggleMobileInfo = () => {
     setMobileInfo((prev) => !prev);
+  };
+
+  const showServices = () => {
+    setServices((prevState) => !prevState);
   };
 
   useEffect(() => {
@@ -53,22 +58,25 @@ function Navbar() {
             style={{ height: mobileMenu ? "524px" : "0px", transition: "0.7s" }}
           >
             <li>
-              <a href="javascript:void(0)">О клинике</a>
-              <ul className="dropdown-menu-col-1" style={{ display: "none" }}>
-                <li>
-                  <Link href="/about">О нас</Link>
-                </li>
-              </ul>
-              <a className="mean-expand" href="#" style={{ fontSize: "18px" }}>
-                +
-              </a>
+              <Link href="/">Главная страница</Link>
+            </li>
+            <li>
+              <Link href="/about">О нас</Link>
             </li>
             <li>
               <Link href="/doctors">Врачи</Link>
             </li>
             <li>
-              <a href="javascript:void(0)">Услуги</a>
-              <ul className="dropdown-menu-col-1" style={{ display: "none" }}>
+              <a
+                onClick={showServices}
+                style={{ position: "relative", zIndex: 1000 }}
+              >
+                Услуги
+              </a>
+              <ul
+                className="dropdown-menu-col-1"
+                style={{ display: services ? "block" : "none" }}
+              >
                 <li>
                   <Link href="/services/diagnostics">Диагностика</Link>
                 </li>
@@ -86,26 +94,19 @@ function Navbar() {
                   </Link>
                 </li>
               </ul>
-              <a className="mean-expand" href="#" style={{ fontSize: "18px" }}>
-                +
+              <a
+                className="mean-expand"
+                href="#"
+                style={{ zIndex: 1001, width: 30, fontSize: 18 }}
+              >
+                {services ? "-" : "+"}
               </a>
             </li>
             <li>
               <Link href="/tools">Оборудование</Link>
             </li>
             <li>
-              <a href="javascript:void(0)">Пресс центр</a>
-              <ul className="dropdown-menu-col-1" style={{ display: "none" }}>
-                <li>
-                  <Link href="/news">Новости</Link>
-                </li>
-                <li>
-                  <Link href="/gallery">Фотогалерея</Link>
-                </li>
-              </ul>
-              <a className="mean-expand" href="#" style={{ fontSize: "18px" }}>
-                +
-              </a>
+              <a href="/news">Новости</a>
             </li>
             <li className="mean-last">
               <Link href="/contact">Контакты</Link>
@@ -134,6 +135,7 @@ function Navbar() {
                   <div className="title">Телефон</div>
                   <div className="info">
                     <a href="tel:+998612297444">+99861 229 74 44</a>
+                    <a href="tel:+998992607474">+99899 260 74 74</a>
                   </div>
                 </div>
               </div>
@@ -165,7 +167,7 @@ function Navbar() {
         </div>
       </div>
       {/* scrollUp Start Here */}
-      <a href="#wrapper" data-type="section-switch" className="scrollUp">
+      <a href="" data-type="section-switch" className="scrollUp">
         <i className="fas fa-angle-double-up"></i>
       </a>
       {/* scrollUp End Here */}
@@ -240,23 +242,21 @@ function Navbar() {
           <div className="header-menu-area header-menu-layout2">
             <div className="container">
               <div className="row no-gutters d-flex align-items-center">
-                <div className="col-md-9 possition-static">
+                <div className="col-md-12 possition-static">
                   <div className="template-main-menu">
                     <nav id="dropdown">
                       <ul>
                         <li>
-                          <a href="javascript:void(0)">О клинике</a>
-                          <ul className="dropdown-menu-col-1">
-                            <li>
-                              <a href="/about">О нас</a>
-                            </li>
-                          </ul>
+                          <a href="/">Главная страница</a>
+                        </li>
+                        <li>
+                          <a href="/about">О нас</a>
                         </li>
                         <li>
                           <a href="/doctors">Врачи</a>
                         </li>
                         <li>
-                          <a href="javascript:void(0)">Услуги</a>
+                          <a>Услуги</a>
                           <ul className="dropdown-menu-col-1">
                             <li>
                               <Link href="/services/diagnostics">
@@ -282,15 +282,7 @@ function Navbar() {
                           <a href="/tools">Оборудование</a>
                         </li>
                         <li>
-                          <a href="javascript:void(0)">Пресс центр</a>
-                          <ul className="dropdown-menu-col-1">
-                            <li>
-                              <a href="/news">Новости</a>
-                            </li>
-                            <li>
-                              <a href="/gallery">Фотогалерея</a>
-                            </li>
-                          </ul>
+                          <a href="/news">Новости</a>
                         </li>
                         <li>
                           <a href="/contact">Контакты</a>

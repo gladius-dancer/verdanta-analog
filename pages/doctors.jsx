@@ -51,14 +51,14 @@ const Doctors = () => {
               <div className="col-12">
                 <div className="breadcrumbs-area">
                   <h1>
-                    <a href="/">Ayziya</a>
+                    <Link href="/">Ayziya</Link>
                   </h1>
                   <ul>
                     <li>
-                      <a href="javascript:void(0)">О клинике</a>
+                      <Link href="/about">О клинике</Link>
                     </li>
                     <li>
-                      <a href="/about">Наши врачи</a>
+                      <Link href="/doctors">Наши врачи</Link>
                     </li>
                   </ul>
                 </div>

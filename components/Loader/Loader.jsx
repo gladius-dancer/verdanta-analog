@@ -13,6 +13,9 @@ const override = {
 
 function Loader() {
   const loading = useSelector((state) => state?.loader?.loader);
+
+  console.log("Loading");
+
   return (
     <>
       {loading && (

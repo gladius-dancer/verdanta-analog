@@ -24,6 +24,9 @@ import Comments from "@/components/Comments/Comments";
 import { useDispatch, useSelector } from "react-redux";
 import { GetDoctorsService } from "@/services/doctors/GetDoctorsService";
 import { GetGalleryService } from "@/services/gallery/GetGalleryService";
+import Link from "next/link";
+import Modal from "@/components/Modal/Modal";
+import cls from "@/components/Modal/Modal.module.css";
 
 const Index = () => {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -32,8 +35,7 @@ const Index = () => {
   const dispatch = useDispatch();
   const doctors = useSelector((state) => state?.doctors?.doctors);
   const gallery = useSelector((state) => state?.gallery?.gallery);
-
-  console.log(gallery);
+  const [modal, setModal] = useState({ status: false, id: null });
 
   const mainAfterChange = (currentSlide) => {
     syncedSliderRef.current.slickGoTo(currentSlide);
@@ -105,10 +107,34 @@ const Index = () => {
             }}
           >
             <SwiperSlide>
+              <img src="../static/images/ayziya/11111111.png" alt="slider" />
+              <div id="slider-direction-1" className="t-cn slider-direction">
+                <div className="slider-content s-tb slide-1">
+                  <div className="text-left title-container s-tb-c">
+                    <div className="container">
+                      <div className="text-box">
+                        <div className="slider-big-text">
+                          AYZIYA
+                          <span> Офтальмологический центр</span>
+                        </div>
+                        <p className="slider-paragraph"></p>
+                        <p>Искусство возвращать зрение</p>
+                        <p></p>
+                        <div className="slider-btn-area">
+                          <Link href="/about" className="item-btn">
+                            Подробно<i className="fas fa-chevron-right"></i>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
               <img
-                src="../static/images/laser-eye-surgery-what-you-need-to-know.jpeg"
+                src="../static/images/ayziya/imgonline-com-ua-Resize-WLaOA6pkcGM7GQ27.jpg"
                 alt="slider"
-                title="#slider-direction-1"
               />
               <div id="slider-direction-1" className="t-cn slider-direction">
                 <div className="slider-content s-tb slide-1">
@@ -123,9 +149,9 @@ const Index = () => {
                         <p>Искусство возвращать зрение</p>
                         <p></p>
                         <div className="slider-btn-area">
-                          <a href="/about" className="item-btn">
+                          <Link href="/about" className="item-btn">
                             Подробно<i className="fas fa-chevron-right"></i>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -135,9 +161,8 @@ const Index = () => {
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="../static/images/3872170.png"
+                src="../static/images/ayziya/C14A1043-min2.jpg"
                 alt="slider"
-                title="#slider-direction-2"
               />
               <div id="slider-direction-2" className="t-cn slider-direction">
                 <div className="slider-content s-tb slide-2">
@@ -151,9 +176,9 @@ const Index = () => {
                         <p>Офтальмологический центр</p>
                         <p></p>
                         <div className="slider-btn-area">
-                          <a href="/about" className="item-btn">
+                          <Link href="/about" className="item-btn">
                             Подробно<i className="fas fa-chevron-right"></i>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -166,7 +191,7 @@ const Index = () => {
       </div>
       {/* Slider Area End Here */}
       {/* About Area Start Here */}
-      <section className="about-wrap-layout2">
+      {/*<section className="about-wrap-layout2">
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-12">
@@ -229,7 +254,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>*/}
       {/* About Area End Here */}
       {/* Departments Area Start Here */}
       <section className="departments-wrap-layout3 bg-accent100 bg-common">
@@ -248,10 +273,6 @@ const Index = () => {
             >
               <div className="main-nav-item">
                 <i className="flaticon-eye"></i>
-                <span>Лазерная коррекция</span>
-              </div>
-              <div className="main-nav-item">
-                <i className="flaticon-eye"></i>
                 <span>Оперативное лечение</span>
               </div>
               <div className="main-nav-item">
@@ -260,7 +281,19 @@ const Index = () => {
               </div>
               <div className="main-nav-item">
                 <i className="flaticon-eye"></i>
-                <span>Витреоретинальная хирургия</span>
+                <span>Консультация офтальмолога</span>
+              </div>
+              <div className="main-nav-item">
+                <i className="flaticon-eye"></i>
+                <span>Диагностика</span>
+              </div>
+              <div className="main-nav-item">
+                <i className="flaticon-eye"></i>
+                <span>Оперативное лечение</span>
+              </div>
+              <div className="main-nav-item">
+                <i className="flaticon-eye"></i>
+                <span>Обследование</span>
               </div>
               <div className="main-nav-item">
                 <i className="flaticon-eye"></i>
@@ -282,31 +315,7 @@ const Index = () => {
                 <div className="media media-none--lg">
                   <div className="item-img">
                     <img
-                      src="../static/images/0g7a1497.jpg"
-                      alt="department"
-                      className="carousel-img-fluid"
-                    />
-                  </div>
-                  <div className="media-body">
-                    <h2 className="item-title">Лазерная коррекция</h2>
-                    <p></p>
-                    <a
-                      href="/services/lazernaya-korrekciya/"
-                      className="item-btn"
-                    >
-                      Подробно{" "}
-                    </a>
-                    <div className="ctg-item-icon">
-                      <i className="flaticon-eye"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="single-item">
-                <div className="media media-none--lg">
-                  <div className="item-img">
-                    <img
-                      src="../static/images/20230315-145850.jpg"
+                      src="../static/images/ayziya/C14A1053-min.jpg"
                       alt="department"
                       className="carousel-img-fluid"
                     />
@@ -330,7 +339,7 @@ const Index = () => {
                 <div className="media media-none--lg">
                   <div className="item-img">
                     <img
-                      src="../static/images/dpp-0069.jpg"
+                      src="../static/images/ayziya/C14A0847-min.jpg"
                       alt="department"
                       className="carousel-img-fluid"
                     />
@@ -351,31 +360,7 @@ const Index = () => {
                 <div className="media media-none--lg">
                   <div className="item-img">
                     <img
-                      src="../static/images/0g7a1473.jpg"
-                      alt="department"
-                      className="carousel-img-fluid"
-                    />
-                  </div>
-                  <div className="media-body">
-                    <h2 className="item-title">Витреоретинальная хирургия </h2>
-                    <p></p>
-                    <a
-                      href="/services/vitreoretinalnaya-hirurgiya/"
-                      className="item-btn"
-                    >
-                      Подробно{" "}
-                    </a>
-                    <div className="ctg-item-icon">
-                      <i className="flaticon-eye"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="single-item">
-                <div className="media media-none--lg">
-                  <div className="item-img">
-                    <img
-                      src="../static/images/dpp-0021.jpg"
+                      src="../static/images/ayziya/C14A0759-min.jpg"
                       alt="department"
                       className="carousel-img-fluid"
                     />
@@ -399,7 +384,97 @@ const Index = () => {
                 <div className="media media-none--lg">
                   <div className="item-img">
                     <img
-                      src="../static/images/0g7a1394.jpg"
+                      src="../static/images/ayziya/C14A0998-min.jpg"
+                      alt="department"
+                      className="carousel-img-fluid"
+                    />
+                  </div>
+                  <div className="media-body">
+                    <h2 className="item-title">Диагностика</h2>
+                    <p></p>
+                    <a href="/services/diagnostika/" className="item-btn">
+                      Подробно{" "}
+                    </a>
+                    <div className="ctg-item-icon">
+                      <i className="flaticon-eye"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="single-item">
+                <div className="media media-none--lg">
+                  <div className="item-img">
+                    <img
+                      src="../static/images/ayziya/C14A1053-min.jpg"
+                      alt="department"
+                      className="carousel-img-fluid"
+                    />
+                  </div>
+                  <div className="media-body">
+                    <h2 className="item-title">Оперативное лечение</h2>
+                    <p></p>
+                    <a
+                      href="/services/operativnoe-lechenie/"
+                      className="item-btn"
+                    >
+                      Подробно{" "}
+                    </a>
+                    <div className="ctg-item-icon">
+                      <i className="flaticon-eye"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="single-item">
+                <div className="media media-none--lg">
+                  <div className="item-img">
+                    <img
+                      src="../static/images/ayziya/C14A0847-min.jpg"
+                      alt="department"
+                      className="carousel-img-fluid"
+                    />
+                  </div>
+                  <div className="media-body">
+                    <h2 className="item-title">Обследование</h2>
+                    <p></p>
+                    <a href="/services/obsledovanie/" className="item-btn">
+                      Подробно{" "}
+                    </a>
+                    <div className="ctg-item-icon">
+                      <i className="flaticon-eye"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="single-item">
+                <div className="media media-none--lg">
+                  <div className="item-img">
+                    <img
+                      src="../static/images/ayziya/C14A0759-min.jpg"
+                      alt="department"
+                      className="carousel-img-fluid"
+                    />
+                  </div>
+                  <div className="media-body">
+                    <h2 className="item-title">Консультация офтальмолога</h2>
+                    <p></p>
+                    <a
+                      href="/services/konsultaciya-oftalmologa/"
+                      className="item-btn"
+                    >
+                      Подробно{" "}
+                    </a>
+                    <div className="ctg-item-icon">
+                      <i className="flaticon-eye"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="single-item">
+                <div className="media media-none--lg">
+                  <div className="item-img">
+                    <img
+                      src="../static/images/ayziya/C14A0998-min.jpg"
                       alt="department"
                       className="carousel-img-fluid"
                     />
@@ -473,13 +548,13 @@ const Index = () => {
                   <div className="gallery-box-layout1">
                     <img src={item.image} alt="gallery" className="img-fluid" />
                     <div className="item-icon">
-                      <a
-                        href="medias/article/big/407/0g7a1390.jpg"
-                        className="popup-zoom"
-                        data-fancybox-group="gallery"
-                        title=""
-                      >
-                        <i className="flaticon-search"></i>
+                      <a className="popup-zoom">
+                        <i
+                          className="flaticon-search"
+                          onClick={() =>
+                            setModal({ status: true, id: item.id })
+                          }
+                        ></i>
                       </a>
                     </div>
                     <div className="item-content">
@@ -495,7 +570,7 @@ const Index = () => {
       </section>
       {/* Gallery Area End Here */}
       {/* Blog-Area Start Here */}
-      <section className="blog-wrap-layout1 bg-accent100">
+      {/*<section className="blog-wrap-layout1 bg-accent100">
         <div className="container">
           <div className="section-heading heading-dark text-center heading-layout1">
             <h2>Информация</h2>
@@ -607,12 +682,21 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>*/}
       {/* Blog-Area End Here */}
       {/* Brand Area Start Here */}
       <Brands />
       {/* Brand Area End Here */}
       {/* Footer Area Start Here */}
+      <Modal
+        isOpen={modal.status}
+        onRequestClose={() => setModal({ id: null, status: false })}
+        modalClass={cls.Modal}
+      >
+        <div className={cls.ModalContainer}>
+          <img src={gallery.find((item) => item.id === modal.id)?.image} />
+        </div>
+      </Modal>
     </MainController>
   );
 };

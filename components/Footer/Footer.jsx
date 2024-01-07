@@ -120,8 +120,8 @@ function Footer() {
                 <ul>
                   <li>Мы в социальных сетях</li>
                   <li>
-                    <a href="">
-                      <i className="fab fa-facebook-f"></i>
+                    <a href="https://t.me/ayziya_clinic">
+                      <i className="fab fa-telegram"></i>
                     </a>
                   </li>
                   <li>
@@ -138,7 +138,7 @@ function Footer() {
       <section className="footer-bottom-wrap">
         <div className="copyright">
           © 2023. Все права защищены. Разработка сайта{" "}
-          <a className="footer-light" href="https://light.uz">
+          <a className="footer-light" href="https://softium.uz">
             Softium
           </a>
         </div>

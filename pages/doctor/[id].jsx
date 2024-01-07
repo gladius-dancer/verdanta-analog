@@ -23,7 +23,6 @@ export default function SingleDoctor() {
 
   return (
     <MainController>
-      <Navbar />
       <div className="container">
         <div className="wpb_column vc_column_container vc_col-sm-12 vc_column_container-64bfc758a3d5c">
           <div className="vc_column-inner ">
@@ -44,7 +43,6 @@ export default function SingleDoctor() {
           </div>
         </div>
       </div>
-      <Footer />
     </MainController>
   );
 }
