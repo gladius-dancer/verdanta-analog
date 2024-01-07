@@ -45,14 +45,16 @@ function MainController({ children, keywords }) {
         <link rel="stylesheet" href="../static/css/custom.css" />
       </Head>
 
-      <div className="mean-container">
-        {/*<div id="preloader"></div>*/}
+      {domLoaded && (
+        <div className="mean-container">
+          {/*<div id="preloader"></div>*/}
 
-        <Navbar />
-        {children}
-        <Footer />
-        <ToastComponent />
-      </div>
+          <Navbar />
+          {children}
+          <Footer />
+          <ToastComponent />
+        </div>
+      )}
     </>
   );
 }
