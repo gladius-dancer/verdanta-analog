@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import MainController from "@/components/MainController";
 import { useDispatch, useSelector } from "react-redux";
 import { GetDoctorsService } from "@/services/doctors/GetDoctorsService";
+import Link from "next/link";
 
 const Doctors = () => {
   const { t } = useTranslation();
@@ -81,17 +82,29 @@ const Doctors = () => {
                       </div>
                       <ul className="item-icon">
                         <li>
-                          <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                          <Link
+                            href={{
+                              pathname: "doctor/[id]",
+                              query: { id: doctor?.id },
+                            }}
+                            className="item-btn"
+                          >
                             <i className="fas fa-plus"></i>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
                     <div className="item-content">
                       <h4 className="item-title">
-                        <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                        <Link
+                          href={{
+                            pathname: "doctor/[id]",
+                            query: { id: doctor?.id },
+                          }}
+                          className="item-btn"
+                        >
                           {doctor?.name}
-                        </a>
+                        </Link>
                       </h4>
                       <p></p>
                     </div>
