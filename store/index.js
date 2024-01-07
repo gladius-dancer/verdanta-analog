@@ -4,6 +4,8 @@ import newsReducer from "./slices/newsSlice";
 import userReducer from "./slices/userSlice";
 import drawerReducer from "./slices/drawerSlice";
 import loaderReducer from "./slices/loaderSlice";
+import doctorsReducer from "./slices/doctorsSlice";
+import galleryReducer from "./slices/gallerySlice";
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +14,8 @@ export const store = configureStore({
     news: newsReducer,
     drawer: drawerReducer,
     loader: loaderReducer,
+    doctors: doctorsReducer,
+    gallery: galleryReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

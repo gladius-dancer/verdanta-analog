@@ -32,6 +32,10 @@ function Footer() {
                       <i className="fas fa-phone"></i>
                       <a href="tel: +998612297444">+99861 229 74 44</a>
                     </li>
+                    <li>
+                      <i className="fas fa-phone"></i>
+                      <a href="tel: +998992607474">+99899 260 74 74</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -99,7 +103,7 @@ function Footer() {
                 </div>
                 <div className="footer-opening-hours">
                   <ul>
-                    <li>Пн.-Пт. 09:00 - 17:00. Сб. 09:00 - 14:00.</li>
+                    <li>Пн.-Пт. 09:00 - 17:00. Сб. 09:00 - 16:00.</li>
                     <li>Закрыто: Воскресенье</li>
                   </ul>
                 </div>

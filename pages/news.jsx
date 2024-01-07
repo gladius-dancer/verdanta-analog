@@ -4,12 +4,20 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { GetNewsService } from "@/services/news/GetNews";
+import Link from "next/link";
 
 const News = () => {
   const [domLoaded, setDomLoaded] = useState(false);
+  const dispatch = useDispatch();
+  const news = useSelector((state) => state.news.news);
+
+  console.log(news);
 
   useEffect(() => {
     setDomLoaded(true);
+    dispatch(GetNewsService());
   }, []);
 
   return (
@@ -35,7 +43,7 @@ const News = () => {
                     <a href="javascript:void(0)">Пресс центр</a>
                   </li>
                   <li>
-                    <a href="/about">Новости</a>
+                    <a href="/news">Новости</a>
                   </li>
                 </ul>
               </div>
@@ -47,211 +55,43 @@ const News = () => {
       <section className="blog-wrap-layout1 bg-accent100">
         <div className="container">
           <div className="row">
-            <div className=" col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div className="blog-box-layout2">
-                <div className="item-img">
-                  <a href="/news/dilemma-koronavirusnoi-epohi-kak-sdelat-tak-chtobi-pri-noshenii-maski-ne-zapotevali-ochki/">
-                    <img
-                      src="../static/images/138753705-2821715744766172-5982061614764927807-o.jpg"
-                      className="img-fluid"
-                      alt="blog"
-                    />
-                  </a>
-                </div>
-                <div className="item-content">
-                  <div className="post-date">20.01.2021</div>
-                  <h3 className="item-title">
+            {news?.map((item, key) => (
+              <div className=" col-xl-4 col-lg-4 col-md-6 col-sm-6" key={key}>
+                <div className="blog-box-layout2">
+                  <div className="item-img">
                     <a href="/news/dilemma-koronavirusnoi-epohi-kak-sdelat-tak-chtobi-pri-noshenii-maski-ne-zapotevali-ochki/">
-                      Дилемма коронавирусной эпохи: КАК СДЕЛАТЬ ТАК, ЧТОБЫ при
-                      ношении маски НЕ ЗАПОТЕВАЛИ ОЧКИ
+                      <img src={item?.image} className="img-fluid" />
                     </a>
-                  </h3>
-                  <div className="post-actions-wrapper">
-                    <ul>
-                      <li>
-                        <a
-                          className="item-btn"
-                          href="/news/dilemma-koronavirusnoi-epohi-kak-sdelat-tak-chtobi-pri-noshenii-maski-ne-zapotevali-ochki/"
-                        >
-                          Подробно
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </a>
-                      </li>
-                    </ul>
+                  </div>
+                  <div className="item-content">
+                    <div className="post-date">
+                      {new Date(item?.created_at).toLocaleDateString()}
+                    </div>
+                    <h3 className="item-title">
+                      <a href="/news/dilemma-koronavirusnoi-epohi-kak-sdelat-tak-chtobi-pri-noshenii-maski-ne-zapotevali-ochki/">
+                        {item?.title}
+                      </a>
+                    </h3>
+                    <div className="post-actions-wrapper">
+                      <ul>
+                        <li>
+                          <Link
+                            href={{
+                              pathname: "news/[id]",
+                              query: { id: item?.id },
+                            }}
+                            className="item-btn"
+                          >
+                            Подробно
+                            <i className="fas fa-long-arrow-alt-right"></i>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className=" col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div className="blog-box-layout2">
-                <div className="item-img">
-                  <a href="/news/diagnostika-i-lechenie-katarakti/">
-                    <img
-                      src="../static/images/katarakta.jpg"
-                      className="img-fluid"
-                      alt="blog"
-                    />
-                  </a>
-                </div>
-                <div className="item-content">
-                  <div className="post-date">14.01.2020</div>
-                  <h3 className="item-title">
-                    <a href="/news/diagnostika-i-lechenie-katarakti/">
-                      Диагностика и лечение катаракты
-                    </a>
-                  </h3>
-                  <div className="post-actions-wrapper">
-                    <ul>
-                      <li>
-                        <a
-                          className="item-btn"
-                          href="/news/diagnostika-i-lechenie-katarakti/"
-                        >
-                          Подробно
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=" col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div className="blog-box-layout2">
-                <div className="item-img">
-                  <a href="/news/5-neochevidnih-prichin-poiti-k-oftalmologu/">
-                    <img
-                      src="../static/images/0g7a1590.jpg"
-                      className="img-fluid"
-                      alt="blog"
-                    />
-                  </a>
-                </div>
-                <div className="item-content">
-                  <div className="post-date">04.01.2020</div>
-                  <h3 className="item-title">
-                    <a href="/news/5-neochevidnih-prichin-poiti-k-oftalmologu/">
-                      5 неочевидных причин пойти к офтальмологу
-                    </a>
-                  </h3>
-                  <div className="post-actions-wrapper">
-                    <ul>
-                      <li>
-                        <a
-                          className="item-btn"
-                          href="/news/5-neochevidnih-prichin-poiti-k-oftalmologu/"
-                        >
-                          Подробно
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=" col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div className="blog-box-layout2">
-                <div className="item-img">
-                  <a href="/news/detskoe-zrenie-osnovnie-problemi/">
-                    <img
-                      src="../static/images/detskaya-oftalmologia-00.jpg"
-                      className="img-fluid"
-                      alt="blog"
-                    />
-                  </a>
-                </div>
-                <div className="item-content">
-                  <div className="post-date">03.01.2020</div>
-                  <h3 className="item-title">
-                    <a href="/news/detskoe-zrenie-osnovnie-problemi/">
-                      Детское зрение: основные проблемы
-                    </a>
-                  </h3>
-                  <div className="post-actions-wrapper">
-                    <ul>
-                      <li>
-                        <a
-                          className="item-btn"
-                          href="/news/detskoe-zrenie-osnovnie-problemi/"
-                        >
-                          Подробно
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=" col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div className="blog-box-layout2">
-                <div className="item-img">
-                  <a href="/news/8-pravil-kak-sohranit-zrenie/">
-                    <img
-                      src="../static/images/0g7a1390.jpg"
-                      className="img-fluid"
-                      alt="blog"
-                    />
-                  </a>
-                </div>
-                <div className="item-content">
-                  <div className="post-date">03.01.2020</div>
-                  <h3 className="item-title">
-                    <a href="/news/8-pravil-kak-sohranit-zrenie/">
-                      8 правил, как сохранить зрение
-                    </a>
-                  </h3>
-                  <div className="post-actions-wrapper">
-                    <ul>
-                      <li>
-                        <a
-                          className="item-btn"
-                          href="/news/8-pravil-kak-sohranit-zrenie/"
-                        >
-                          Подробно
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=" col-xl-4 col-lg-4 col-md-6 col-sm-6">
-              <div className="blog-box-layout2">
-                <div className="item-img">
-                  <a href="/news/narusheniya-zreniya-i-slepota/">
-                    <img
-                      src="../static/images/1548807757-okulist-kak-vybrat-horoshego-vracha.jpg"
-                      className="img-fluid"
-                      alt="blog"
-                    />
-                  </a>
-                </div>
-                <div className="item-content">
-                  <div className="post-date">03.01.2020</div>
-                  <h3 className="item-title">
-                    <a href="/news/narusheniya-zreniya-i-slepota/">
-                      Нарушения зрения и слепота
-                    </a>
-                  </h3>
-                  <div className="post-actions-wrapper">
-                    <ul>
-                      <li>
-                        <a
-                          className="item-btn"
-                          href="/news/narusheniya-zreniya-i-slepota/"
-                        >
-                          Подробно
-                          <i className="fas fa-long-arrow-alt-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
           <ul className="pagination-layout1 margin-t-20"></ul>
         </div>

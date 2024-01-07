@@ -70,10 +70,20 @@ function Navbar() {
               <a href="javascript:void(0)">Услуги</a>
               <ul className="dropdown-menu-col-1" style={{ display: "none" }}>
                 <li>
-                  <Link href="/services">Все услуги </Link>
+                  <Link href="/services/diagnostics">Диагностика</Link>
                 </li>
                 <li>
-                  <Link href="/price-list">Прейскурант услуг</Link>
+                  <Link href="/services/consultation">
+                    Консультация офтальмолога
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/survey">Обследование</Link>
+                </li>
+                <li>
+                  <Link href="/services/surgical-treatment">
+                    Оперативное лечение
+                  </Link>
                 </li>
               </ul>
               <a className="mean-expand" href="#" style={{ fontSize: "18px" }}>
@@ -134,7 +144,7 @@ function Navbar() {
                   <div className="title">Рабочее время</div>
                   <div className="info">
                     <div>Пн.-Пт. 09:00 - 17:00.</div>
-                    <div>Сб. 09:00 - 14:00.</div>
+                    <div>Сб. 09:00 - 16:00.</div>
                   </div>
                 </div>
               </div>
@@ -196,6 +206,16 @@ function Navbar() {
                     </li>
                     <li>
                       <div className="media">
+                        <i className="far fa-clock"></i>
+                        <div className="media-body space-sm">
+                          <div className="info">
+                            Пн.-Пт. 09:00 - 17:00. Сб. 09:00 - 16:00.
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="media">
                         <i className="fas fa-phone"></i>
                         <div className="media-body space-sm">
                           <div className="info">
@@ -203,13 +223,11 @@ function Navbar() {
                           </div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div className="media">
-                        <i className="far fa-clock"></i>
+                      <div className="media" style={{ marginTop: 10 }}>
+                        <i className="fas fa-phone"></i>
                         <div className="media-body space-sm">
                           <div className="info">
-                            Пн.-Пт. 09:00 - 17:00. Сб. 09:00 - 14:00.
+                            <a href="tel:+998992607474">+99899 260 74 74</a>
                           </div>
                         </div>
                       </div>
@@ -241,10 +259,22 @@ function Navbar() {
                           <a href="javascript:void(0)">Услуги</a>
                           <ul className="dropdown-menu-col-1">
                             <li>
-                              <a href="/services">Все услуги </a>
+                              <Link href="/services/diagnostics">
+                                Диагностика
+                              </Link>
                             </li>
                             <li>
-                              <a href="/price-list">Прейскурант услуг</a>
+                              <Link href="/services/consultation">
+                                Консультация офтальмолога
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/services/survey">Обследование</Link>
+                            </li>
+                            <li>
+                              <Link href="/services/surgical-treatment">
+                                Оперативное лечение
+                              </Link>
                             </li>
                           </ul>
                         </li>

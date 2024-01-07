@@ -21,11 +21,19 @@ import {
 import Slider from "react-slick";
 import Brands from "@/components/Brands/Brands";
 import Comments from "@/components/Comments/Comments";
+import { useDispatch, useSelector } from "react-redux";
+import { GetDoctorsService } from "@/services/doctors/GetDoctorsService";
+import { GetGalleryService } from "@/services/gallery/GetGalleryService";
 
 const Index = () => {
   const [domLoaded, setDomLoaded] = useState(false);
   const mainSliderRef = useRef();
   const syncedSliderRef = useRef();
+  const dispatch = useDispatch();
+  const doctors = useSelector((state) => state?.doctors?.doctors);
+  const gallery = useSelector((state) => state?.gallery?.gallery);
+
+  console.log(gallery);
 
   const mainAfterChange = (currentSlide) => {
     syncedSliderRef.current.slickGoTo(currentSlide);
@@ -72,6 +80,8 @@ const Index = () => {
 
   useEffect(() => {
     setDomLoaded(true);
+    dispatch(GetDoctorsService());
+    dispatch(GetGalleryService());
   }, []);
   return (
     <MainController>
@@ -107,10 +117,7 @@ const Index = () => {
                       <div className="text-box">
                         <div className="slider-big-text">
                           AYZIYA
-                          <span>
-                            {" "}
-                            Офтальмологический центр доктора <br /> Акшей Кхера{" "}
-                          </span>
+                          <span> Офтальмологический центр</span>
                         </div>
                         <p className="slider-paragraph"></p>
                         <p>Искусство возвращать зрение</p>
@@ -141,7 +148,7 @@ const Index = () => {
                           AYZIYA<span> Искусство возвращать зрение </span>
                         </div>
                         <p className="slider-paragraph"></p>
-                        <p>Офтальмологический центр доктора Акшей Кхера</p>
+                        <p>Офтальмологический центр</p>
                         <p></p>
                         <div className="slider-btn-area">
                           <a href="/about" className="item-btn">
@@ -421,7 +428,7 @@ const Index = () => {
             <div className="progress-box-layout2 col-md-4">
               <div className="inner-item">
                 <div className="counting-text counter" data-num="15">
-                  15
+                  8
                 </div>
                 <p>Опытных врачей</p>
               </div>
@@ -429,7 +436,7 @@ const Index = () => {
             <div className="progress-box-layout2 col-md-4">
               <div className="inner-item">
                 <div className="counting-text counter" data-num="60000">
-                  60000
+                  200
                 </div>
                 <p>Пациентов</p>
               </div>
@@ -437,7 +444,7 @@ const Index = () => {
             <div className="progress-box-layout2 col-md-4">
               <div className="inner-item">
                 <div className="counting-text counter" data-num="20000">
-                  20000
+                  50
                 </div>
                 <p>Проведенных операций</p>
               </div>
@@ -447,7 +454,7 @@ const Index = () => {
       </section>
       {/* Progress Area End Here */}
       {/* Team Area Start Here */}
-      <DoctorsSlider />
+      <DoctorsSlider doctors={doctors} />
       {/* Team Area End Here */}
       {/* Testimonial Area Start Here */}
       <Comments />
@@ -461,98 +468,27 @@ const Index = () => {
           </div>
           <div className="isotope-wrap">
             <div className="row featuredContainer zoom-gallery">
-              <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div className="gallery-box-layout1">
-                  <img
-                    src="../static/images/0g7a1390.jpg"
-                    alt="gallery"
-                    className="img-fluid"
-                  />
-                  <div className="item-icon">
-                    <a
-                      href="medias/article/big/407/0g7a1390.jpg"
-                      className="popup-zoom"
-                      data-fancybox-group="gallery"
-                      title=""
-                    >
-                      <i className="flaticon-search"></i>
-                    </a>
-                  </div>
-                  <div className="item-content">
-                    <h3 className="item-title">Диагностика</h3>
-                    <span className="title-ctg">Диагностика</span>
+              {gallery.map((item, key) => (
+                <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={key}>
+                  <div className="gallery-box-layout1">
+                    <img src={item.image} alt="gallery" className="img-fluid" />
+                    <div className="item-icon">
+                      <a
+                        href="medias/article/big/407/0g7a1390.jpg"
+                        className="popup-zoom"
+                        data-fancybox-group="gallery"
+                        title=""
+                      >
+                        <i className="flaticon-search"></i>
+                      </a>
+                    </div>
+                    <div className="item-content">
+                      <h3 className="item-title">Ayziya</h3>
+                      <span className="title-ctg">Ayziya</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div className="gallery-box-layout1">
-                  <img
-                    src="../static/images/0g7a1427.jpg"
-                    alt="gallery"
-                    className="img-fluid"
-                  />
-                  <div className="item-icon">
-                    <a
-                      href="medias/article/big/404/0g7a1427.jpg"
-                      className="popup-zoom"
-                      data-fancybox-group="gallery"
-                      title=""
-                    >
-                      <i className="flaticon-search"></i>
-                    </a>
-                  </div>
-                  <div className="item-content">
-                    <h3 className="item-title">Диагностика</h3>
-                    <span className="title-ctg">Диагностика</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div className="gallery-box-layout1">
-                  <img
-                    src="../static/images/0g7a1594.jpg"
-                    alt="gallery"
-                    className="img-fluid"
-                  />
-                  <div className="item-icon">
-                    <a
-                      href="medias/article/big/398/0g7a1594.jpg"
-                      className="popup-zoom"
-                      data-fancybox-group="gallery"
-                      title=""
-                    >
-                      <i className="flaticon-search"></i>
-                    </a>
-                  </div>
-                  <div className="item-content">
-                    <h3 className="item-title">Ayziya</h3>
-                    <span className="title-ctg">Ayziya</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div className="gallery-box-layout1">
-                  <img
-                    src="../static/images/0g7a1375.jpg"
-                    alt="gallery"
-                    className="img-fluid"
-                  />
-                  <div className="item-icon">
-                    <a
-                      href="medias/article/big/399/0g7a1375.jpg"
-                      className="popup-zoom"
-                      data-fancybox-group="gallery"
-                      title=""
-                    >
-                      <i className="flaticon-search"></i>
-                    </a>
-                  </div>
-                  <div className="item-content">
-                    <h3 className="item-title">Регистратура</h3>
-                    <span className="title-ctg">Регистратура</span>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

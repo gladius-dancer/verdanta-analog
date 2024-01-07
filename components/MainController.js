@@ -20,7 +20,7 @@ function MainController({ children, keywords }) {
           name="format-detection"
           content="telephone=no, date=no, email=no, address=no"
         />
-        <title>Massaget</title>
+        <title>Ayziya</title>
         <link
           rel="shortcut icon"
           type="image/x-icon"

@@ -143,14 +143,12 @@ const Contact = () => {
                       дом 290.
                     </li>
                     <li>
-                      <i className="far fa-envelope"></i>
-                      <a href="mailto:admin@ayziya.uz">admin@ayziya.uz</a>
+                      <i className="fas fa-phone"></i>
+                      <a href="tel: +998612297444">+99861 229 74 44</a>
                     </li>
                     <li>
-                      <i className="fas fa-phone"></i>{" "}
-                      <a href="tel:+99871 249 66 33         +99871 249 66 77">
-                        +99871 249 66 33 +99871 249 66 77
-                      </a>
+                      <i className="fas fa-phone"></i>
+                      <a href="tel: +998992607474">+99899 260 74 74</a>
                     </li>
                   </ul>
                 </div>

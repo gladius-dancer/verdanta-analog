@@ -14,7 +14,7 @@ function AdminController({ children, keywords }) {
           name="format-detection"
           content="telephone=no, date=no, email=no, address=no"
         />
-        <title>Massaget</title>
+        <title>Ayziya</title>
       </Head>
       <div>
         <ToastComponent />

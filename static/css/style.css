@@ -4262,8 +4262,9 @@ div ~ :last-child .call-to-action-box-layout5 {
   -o-border-radius: 50%;
   border-radius: 50%;
   margin: 0 auto 23px;
-  max-width: 230px;
-  max-height: 230px;
+  height: 170px;
+  width: 170px;
+  overflow: hidden;
 }
 .team-box-layout2 .item-img img {
   width: 100%;
@@ -11376,6 +11377,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 @media only screen and (max-width: 768px) {
   .mobile-info .col-12 {
     height: auto;
+    border: none;
   }
 
   .mobile-info .col-12 .info{
@@ -11384,6 +11386,7 @@ div ~ :last-child .call-to-action-box-layout5 {
     gap: 10px;
   }
 }
+
 
 .mobile-info .col-12:last-child {
   margin-right: 0;

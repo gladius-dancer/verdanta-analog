@@ -165,18 +165,6 @@ const Tools = () => {
               </div>
             </div>
           </div>
-          <ul className="pagination-layout1 margin-t-20">
-            <li className="active">
-              <a href="/tools?currPage=1">1</a>
-            </li>
-            <li className="">
-              <a href="/tools?currPage=2">2</a>
-            </li>
-            <li className="next">
-              {" "}
-              <a href="/tools?currPage=2">След. »</a>
-            </li>
-          </ul>
         </div>
       </section>
     </MainController>

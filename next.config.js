@@ -4,8 +4,7 @@ const nextConfig = {};
 module.exports = {
   nextConfig,
   env: {
-    url: "https://massagethotel.com:8000",
-    // url: "https://94.198.217.101:8000",
+    url: "https://www.ayziya.uz:8000/api",
   },
   webpack5: true,
   webpack: (config) => {
