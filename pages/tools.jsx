@@ -26,7 +26,7 @@ const Tools = () => {
             <div className="col-12">
               <div className="breadcrumbs-area">
                 <h1>
-                  <a href="/">Vedanta</a>
+                  <a href="/">Ayziya</a>
                 </h1>
                 <ul>
                   <li>
@@ -49,140 +49,115 @@ const Tools = () => {
               <div className="departments-box-layout5">
                 <div className="item-img">
                   <img
-                    src="../static/images/1287-srs.jpg"
+                    src="../static/images/tools/Appa%20YAG%20Лазер,%20модель%20307.jpg"
                     alt="department"
                     className="img-fluid"
                     style={{ height: "270px" }}
                   />
                   <div className="item-content">
                     <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/stellaris-pc/">Stellaris PC</a>
-                    </h3>
-                    <p></p>
-                    <a href="/tools/stellaris-pc/" className="item-btn">
-                      Подробно
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-lg-6 col-md-6 col-12">
-              <div className="departments-box-layout5">
-                <div className="item-img">
-                  <img
-                    src="../static/images/bb311a62de17710324e17ffc9ca7ffb6.jpg"
-                    alt="department"
-                    className="img-fluid"
-                    style={{ height: "270px" }}
-                  />
-                  <div className="item-content">
-                    <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/oftalmologicheskii-mikroskop-zeiss-opmi-lumera-t/">
-                        Офтальмологический микроскоп ZEISS OPMI Lumera T
+                      <a href="/tools/stellaris-pc/">
+                        Appa YAG Лазер, модель 307
                       </a>
                     </h3>
                     <p></p>
-                    <a
-                      href="/tools/oftalmologicheskii-mikroskop-zeiss-opmi-lumera-t/"
-                      className="item-btn"
-                    >
+                    <a href="/" className="item-btn">
                       Подробно
                     </a>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className="col-xl-4 col-lg-6 col-md-6 col-12">
               <div className="departments-box-layout5">
                 <div className="item-img">
                   <img
-                    src="../static/images/67749-6560235.jpg"
+                    src="../static/images/tools/Huvitz%20Auto-Ref%20Keratometer%20HRK-1.jpg"
                     alt="department"
                     className="img-fluid"
                     style={{ height: "270px" }}
                   />
                   <div className="item-content">
                     <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/mnogoparametricheskii-monitor-pacienta-dlya-ekg-mmed6000dp-m7/">
-                        Многопараметрический монитор пациента для ЭКГ
-                        MMED6000DP-M7
+                      <a href="/tools/stellaris-pc/">
+                        Huvitz Auto-Ref Keratometer HRK-1
                       </a>
                     </h3>
                     <p></p>
-                    <a
-                      href="/tools/mnogoparametricheskii-monitor-pacienta-dlya-ekg-mmed6000dp-m7/"
-                      className="item-btn"
-                    >
+                    <a href="/" className="item-btn">
                       Подробно
                     </a>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className="col-xl-4 col-lg-6 col-md-6 col-12">
               <div className="departments-box-layout5">
                 <div className="item-img">
                   <img
-                    src="../static/images/photo-2021-12-21-16-35-46.jpg"
+                    src="../static/images/tools/Huvitz%20HS-5000%205x%20Slit%20Lamp%20Microscope.jpg"
                     alt="department"
                     className="img-fluid"
                     style={{ height: "270px" }}
                   />
                   <div className="item-content">
                     <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/cirrus-hd-oct-5000/">
-                        CIRRUS HD OCT 5000
+                      <a href="/tools/stellaris-pc/">
+                        Huvitz HS-5000 5x Slit Lamp Microscope
                       </a>
                     </h3>
                     <p></p>
-                    <a href="/tools/cirrus-hd-oct-5000/" className="item-btn">
+                    <a href="/" className="item-btn">
                       Подробно
                     </a>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className="col-xl-4 col-lg-6 col-md-6 col-12">
               <div className="departments-box-layout5">
                 <div className="item-img">
                   <img
-                    src="../static/images/33762a650a1c092dba974a7048e98eb5.png"
+                    src="../static/images/tools/Huvitz%20Non%20Contact%20Tonometer%20HNT-1.jpg"
                     alt="department"
                     className="img-fluid"
                     style={{ height: "270px" }}
                   />
                   <div className="item-content">
                     <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/oftalmologicheskii-lazer-zeiss-visulas-532s/">
-                        Офтальмологический лазер ZEISS VISULAS 532s
+                      <a href="/tools/stellaris-pc/">
+                        Huvitz Non Contact Tonometer HNT-1
                       </a>
                     </h3>
                     <p></p>
-                    <a
-                      href="/tools/oftalmologicheskii-lazer-zeiss-visulas-532s/"
-                      className="item-btn"
-                    >
+                    <a href="/" className="item-btn">
                       Подробно
                     </a>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className="col-xl-4 col-lg-6 col-md-6 col-12">
               <div className="departments-box-layout5">
                 <div className="item-img">
                   <img
-                    src="../static/images/photo-2021-12-21-17-08-20.jpg"
+                    src="../static/images/tools/Opthalmic%20Phacoemulsifier%20-%20Appasamy.jpg"
                     alt="department"
                     className="img-fluid"
                     style={{ height: "270px" }}
                   />
                   <div className="item-content">
                     <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/visucamnm-fa/">VISUCAM®NM / FA</a>
+                      <a href="/tools/stellaris-pc/">
+                        Opthalmic Phacoemulsifier - Appasamy
+                      </a>
                     </h3>
                     <p></p>
-                    <a href="/tools/visucamnm-fa/" className="item-btn">
+                    <a href="/" className="item-btn">
                       Подробно
                     </a>
                   </div>

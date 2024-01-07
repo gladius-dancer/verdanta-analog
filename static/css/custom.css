@@ -48,7 +48,7 @@
 .main-nav-item i:before{
     margin: 0;
     font-size: 60px;
-    color: #396cf0;
+    color: rgba(57, 108, 240, 0.8);
 }
 
 .departments-box-layout3 .slick-current .main-nav-item{
@@ -57,7 +57,7 @@
 }
 
 .departments-box-layout3 .slick-current .main-nav-item i:before{
-    background: #396cf0;
+    background: rgba(57, 108, 240, 0.8);
     color: #fff;
 }
 
@@ -72,42 +72,58 @@
 
 .departments-box-layout3 .slick-next{
     z-index: 100;
-    border: 1px #396cf0 solid;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    right: -50px;
+    right: -60px;
+    background: #fff;
+
 }
 
 .team-wrap-layout1 .slick-next{
     z-index: 100;
-    border: 1px #396cf0 solid;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     right: 0;
     top: -60px;
+    background: #fff;
+
 }
 
 .departments-box-layout3 .slick-prev{
     z-index: 100;
-    border: 1px #396cf0 solid;
+    /*border: 1px rgba(57, 108, 240, 0.8) solid;*/
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    left: -50px;
-    color: #396cf0;
+    left: -60px;
+    color: rgba(57, 108, 240, 0.8);
+    background: #fff;
 }
+
+@media only screen and (max-width: 1060px) {
+    .departments-box-layout3 .slick-prev{
+        display: none!important;
+    }
+
+    .departments-box-layout3 .slick-next{
+        display: none!important;
+    }
+}
+
 
 .team-wrap-layout1 .slick-prev{
     z-index: 100;
-    border: 1px #396cf0 solid;
+    /*border: 1px rgba(57, 108, 240, 0.8) solid;*/
     width: 50px;
     height: 50px;
     border-radius: 50%;
     left: calc(100% - 120px);
     top: -60px;
-    color: #396cf0;
+    color: rgba(57, 108, 240, 0.8);
+    background: #fff;
+
 }
 
 .departments-box-layout3 .slick-prev:after, .team-wrap-layout1 .slick-prev:after{
@@ -136,9 +152,32 @@
     transform: translate(-50%, -50%);
 }
 
+.departments-box-layout3 .carousel-content{
+    transform: translateX(-10px);
+}
+
 @media only screen and (max-width: 620px){
     .departments-box-layout3 .slick-next, .departments-box-layout3 .slick-prev{
         display: none!important;
     }
 }
 
+.slick-next:before, .slick-prev:before {
+    display: none;
+}
+
+
+.slick-next:hover{
+    box-shadow: 0px 0px 10px 0px rgba(57, 108, 240, 0.8);
+
+    .slick-next::after{
+        color: #fff!important;
+    }
+}
+.slick-prev:hover{
+    box-shadow: 0px 0px 10px 0px rgba(57, 108, 240, 0.8);
+
+    .slick-prev::after{
+        color: #fff!important;
+    }
+}

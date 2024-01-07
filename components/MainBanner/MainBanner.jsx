@@ -1,7 +1,4 @@
 import { useTranslation } from "next-i18next";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Autoplay, EffectFade, Navigation } from "swiper/modules";
-import cls from "@/components/RoomSlider/RoomSlider.module.css";
 import React, { useEffect, useState } from "react";
 
 function MainBanner() {

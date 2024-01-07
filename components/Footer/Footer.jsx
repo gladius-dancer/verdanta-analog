@@ -26,17 +26,11 @@ function Footer() {
                   <ul>
                     <li>
                       <i className="fas fa-map-marker-alt"></i>
-                      <a href="/contact">ул. Маннон Уйгур, дом 290.</a>
+                      <a href="/contact">г. Нукус ул. Танирхан, дом 22 а.</a>
                     </li>
                     <li>
                       <i className="fas fa-phone"></i>
-                      <a href="tel: +99871 249 66 33         +99871 249 66 77">
-                        +99871 249 66 33 +99871 249 66 77
-                      </a>
-                    </li>
-                    <li>
-                      <i className="far fa-envelope"></i>
-                      <a href="mailto:admin@vedanta.uz">admin@vedanta.uz</a>
+                      <a href="tel: +998612297444">+99861 229 74 44</a>
                     </li>
                   </ul>
                 </div>
@@ -53,17 +47,17 @@ function Footer() {
                       <a href="">О клинике </a>
                     </li>
                     <li>
-                      <a href="https://vedanta.corporate.uz/doctorsSlider">
+                      <a href="https://ayziya.corporate.uz/doctorsSlider">
                         Врачи{" "}
                       </a>
                     </li>
                     <li>
-                      <a href="https://vedanta.corporate.uz/tools">
+                      <a href="https://ayziya.corporate.uz/tools">
                         Оборудование{" "}
                       </a>
                     </li>
                     <li>
-                      <a href="https://vedanta.corporate.uz/news">Новости </a>
+                      <a href="https://ayziya.corporate.uz/news">Новости </a>
                     </li>
                   </ul>
                 </div>
@@ -77,17 +71,17 @@ function Footer() {
                 <div className="footer-quick-link">
                   <ul>
                     <li>
-                      <a href="https://vedanta.corporate.uz/services/obsledovanie/">
+                      <a href="https://ayziya.corporate.uz/services/obsledovanie/">
                         Обследование{" "}
                       </a>
                     </li>
                     <li>
-                      <a href="https://vedanta.corporate.uz/services/operativnoe-lechenie/">
+                      <a href="https://ayziya.corporate.uz/services/operativnoe-lechenie/">
                         Оперативное лечение{" "}
                       </a>
                     </li>
                     <li>
-                      <a href="https://vedanta.corporate.uz/services/vitreoretinalnaya-hirurgiya/">
+                      <a href="https://ayziya.corporate.uz/services/vitreoretinalnaya-hirurgiya/">
                         Хирургия{" "}
                       </a>
                     </li>
@@ -122,12 +116,12 @@ function Footer() {
                 <ul>
                   <li>Мы в социальных сетях</li>
                   <li>
-                    <a href="https://www.facebook.com/Vedantamedical/">
+                    <a href="">
                       <i className="fab fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/vedanta_uz/">
+                    <a href="https://www.instagram.com/ayziya_clinic">
                       <i className="fab fa-instagram"></i>
                     </a>
                   </li>

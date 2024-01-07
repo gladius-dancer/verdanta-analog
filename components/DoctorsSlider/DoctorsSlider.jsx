@@ -40,178 +40,195 @@ function DoctorsSlider() {
         </div>
         <Slider {...doctorsSlider}>
           <div className="team-box-layout2">
-            <div className="item-img">
-              <img
-                src="../../static/images/0g7a1583.jpg"
-                alt="Team1"
-                className="img-fluid rounded-circle"
-              />
-              <ul className="item-icon">
-                <li>
+            <div className="team-box-inner">
+              <div className="item-img">
+                <img
+                  src="../../static/images/0g7a1583.jpg"
+                  alt="Team1"
+                  className="img-fluid rounded-circle"
+                />
+                <ul className="item-icon">
+                  <li>
+                    <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                      <i className="fas fa-plus"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="item-content">
+                <h4 className="item-title">
                   <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
-                    <i className="fas fa-plus"></i>
+                    Главный офтальмохирург - Акшей Кхера
                   </a>
-                </li>
-              </ul>
-            </div>
-            <div className="item-content">
-              <h4 className="item-title">
-                <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
-                  Главный офтальмохирург - Акшей Кхера
+                </h4>
+                <p></p>
+                <a
+                  href="/doctors/glavnii-oftalmohirurg-akshei-khera/"
+                  className="item-btn"
+                >
+                  Подробно{" "}
                 </a>
-              </h4>
-              <p></p>
-              <a
-                href="/doctors/glavnii-oftalmohirurg-akshei-khera/"
-                className="item-btn"
-              >
-                Подробно{" "}
-              </a>
+              </div>
             </div>
           </div>
           <div className="team-box-layout2">
-            <div className="item-img">
-              <img
-                src="../../static/images/0g7a1555.jpg"
-                alt="Team1"
-                className="img-fluid rounded-circle"
-              />
-              <ul className="item-icon">
-                <li>
-                  <a href="/doctors/abdullaeva-nodira-bahtiyarovna/">
-                    <i className="fas fa-plus"></i>
+            <div className="team-box-inner">
+              <div className="item-img">
+                <img
+                  src="../../static/images/0g7a1583.jpg"
+                  alt="Team1"
+                  className="img-fluid rounded-circle"
+                />
+                <ul className="item-icon">
+                  <li>
+                    <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                      <i className="fas fa-plus"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="item-content">
+                <h4 className="item-title">
+                  <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                    Главный офтальмохирург - Акшей Кхера
                   </a>
-                </li>
-              </ul>
-            </div>
-            <div className="item-content">
-              <h4 className="item-title">
-                <a href="/doctors/abdullaeva-nodira-bahtiyarovna/">
-                  Абдуллаева Нодира Бахтияровна
+                </h4>
+                <p></p>
+                <a
+                  href="/doctors/glavnii-oftalmohirurg-akshei-khera/"
+                  className="item-btn"
+                >
+                  Подробно{" "}
                 </a>
-              </h4>
-              <p></p>
-              <a
-                href="/doctors/abdullaeva-nodira-bahtiyarovna/"
-                className="item-btn"
-              >
-                Подробно{" "}
-              </a>
+              </div>
             </div>
           </div>
           <div className="team-box-layout2">
-            <div className="item-img">
-              <img
-                src="../../static/images/0g7a1408.jpg"
-                alt="Team1"
-                className="img-fluid rounded-circle"
-              />
-              <ul className="item-icon">
-                <li>
-                  <a href="/doctors/nizamhodzhaev-sharofiddin/">
-                    <i className="fas fa-plus"></i>
+            <div className="team-box-inner">
+              <div className="item-img">
+                <img
+                  src="../../static/images/0g7a1583.jpg"
+                  alt="Team1"
+                  className="img-fluid rounded-circle"
+                />
+                <ul className="item-icon">
+                  <li>
+                    <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                      <i className="fas fa-plus"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="item-content">
+                <h4 className="item-title">
+                  <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                    Главный офтальмохирург - Акшей Кхера
                   </a>
-                </li>
-              </ul>
-            </div>
-            <div className="item-content">
-              <h4 className="item-title">
-                <a href="/doctors/nizamhodzhaev-sharofiddin/">
-                  Низамходжаев Шарофиддин
+                </h4>
+                <p></p>
+                <a
+                  href="/doctors/glavnii-oftalmohirurg-akshei-khera/"
+                  className="item-btn"
+                >
+                  Подробно{" "}
                 </a>
-              </h4>
-              <p></p>
-              <a
-                href="/doctors/nizamhodzhaev-sharofiddin/"
-                className="item-btn"
-              >
-                Подробно{" "}
-              </a>
+              </div>
             </div>
           </div>
           <div className="team-box-layout2">
-            <div className="item-img">
-              <img
-                src="../../static/images/0g7a1412.jpg"
-                alt="Team1"
-                className="img-fluid rounded-circle"
-              />
-              <ul className="item-icon">
-                <li>
-                  <a href="/doctors/samandarov-dilmurod/">
-                    <i className="fas fa-plus"></i>
+            <div className="team-box-inner">
+              <div className="item-img">
+                <img
+                  src="../../static/images/0g7a1583.jpg"
+                  alt="Team1"
+                  className="img-fluid rounded-circle"
+                />
+                <ul className="item-icon">
+                  <li>
+                    <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                      <i className="fas fa-plus"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="item-content">
+                <h4 className="item-title">
+                  <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                    Главный офтальмохирург - Акшей Кхера
                   </a>
-                </li>
-              </ul>
-            </div>
-            <div className="item-content">
-              <h4 className="item-title">
-                <a href="/doctors/samandarov-dilmurod/">Самандаров Дильмурод</a>
-              </h4>
-              <p></p>
-              <a href="/doctors/samandarov-dilmurod/" className="item-btn">
-                Подробно{" "}
-              </a>
+                </h4>
+                <p></p>
+                <a
+                  href="/doctors/glavnii-oftalmohirurg-akshei-khera/"
+                  className="item-btn"
+                >
+                  Подробно{" "}
+                </a>
+              </div>
             </div>
           </div>
           <div className="team-box-layout2">
-            <div className="item-img">
-              <img
-                src="../../static/images/photo-2021-12-15-14-14-08.jpg"
-                alt="Team1"
-                className="img-fluid rounded-circle"
-              />
-              <ul className="item-icon">
-                <li>
-                  <a href="/doctors/niezmetov-noufar-norimboevich/">
-                    <i className="fas fa-plus"></i>
+            <div className="team-box-inner">
+              <div className="item-img">
+                <img
+                  src="../../static/images/0g7a1583.jpg"
+                  alt="Team1"
+                  className="img-fluid rounded-circle"
+                />
+                <ul className="item-icon">
+                  <li>
+                    <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                      <i className="fas fa-plus"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="item-content">
+                <h4 className="item-title">
+                  <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                    Главный офтальмохирург - Акшей Кхера
                   </a>
-                </li>
-              </ul>
-            </div>
-            <div className="item-content">
-              <h4 className="item-title">
-                <a href="/doctors/niezmetov-noufar-norimboevich/">
-                  Ниезметов Ноуфар Норимбоевич
+                </h4>
+                <p></p>
+                <a
+                  href="/doctors/glavnii-oftalmohirurg-akshei-khera/"
+                  className="item-btn"
+                >
+                  Подробно{" "}
                 </a>
-              </h4>
-              <p></p>
-              <a
-                href="/doctors/niezmetov-noufar-norimboevich/"
-                className="item-btn"
-              >
-                Подробно{" "}
-              </a>
+              </div>
             </div>
           </div>
           <div className="team-box-layout2">
-            <div className="item-img">
-              <img
-                src="../../static/images/0g7a1419.jpg"
-                alt="Team1"
-                className="img-fluid rounded-circle"
-              />
-              <ul className="item-icon">
-                <li>
-                  <a href="/doctors/abdurahmanova-umida-muhammadzhanovna/">
-                    <i className="fas fa-plus"></i>
+            <div className="team-box-inner">
+              <div className="item-img">
+                <img
+                  src="../../static/images/0g7a1583.jpg"
+                  alt="Team1"
+                  className="img-fluid rounded-circle"
+                />
+                <ul className="item-icon">
+                  <li>
+                    <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                      <i className="fas fa-plus"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="item-content">
+                <h4 className="item-title">
+                  <a href="/doctors/glavnii-oftalmohirurg-akshei-khera/">
+                    Главный офтальмохирург - Акшей Кхера
                   </a>
-                </li>
-              </ul>
-            </div>
-            <div className="item-content">
-              <h4 className="item-title">
-                <a href="/doctors/abdurahmanova-umida-muhammadzhanovna/">
-                  Абдурахманова Умида Мухаммаджановна
+                </h4>
+                <p></p>
+                <a
+                  href="/doctors/glavnii-oftalmohirurg-akshei-khera/"
+                  className="item-btn"
+                >
+                  Подробно{" "}
                 </a>
-              </h4>
-              <p></p>
-              <a
-                href="/doctors/abdurahmanova-umida-muhammadzhanovna/"
-                className="item-btn"
-              >
-                Подробно{" "}
-              </a>
+              </div>
             </div>
           </div>
         </Slider>

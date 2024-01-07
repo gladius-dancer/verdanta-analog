@@ -28,7 +28,7 @@ const News = () => {
             <div className="col-12">
               <div className="breadcrumbs-area">
                 <h1>
-                  <a href="/">Vedanta</a>
+                  <a href="/">Ayziya</a>
                 </h1>
                 <ul>
                   <li>

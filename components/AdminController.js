@@ -1,10 +1,6 @@
 import Head from "next/head";
 import "./i18n/i18n";
 import { ToastComponent } from "@/components/Toast/ui/ToastComponent";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { GetCurrentUserService } from "@/services/auth/AuthService";
-import { useRouter } from "next/router";
 import Loader from "@/components/Loader/Loader";
 
 function AdminController({ children, keywords }) {

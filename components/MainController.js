@@ -1,6 +1,5 @@
 import Head from "next/head";
 import "./i18n/i18n";
-import Link from "next/link";
 import { ToastComponent } from "@/components/Toast/ui/ToastComponent";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
@@ -25,7 +24,7 @@ function MainController({ children, keywords }) {
         <link
           rel="shortcut icon"
           type="image/x-icon"
-          href="../static/images/favicon.png"
+          href="../static/logo2.ico"
         />
         <link rel="stylesheet" href="../static/css/normalize.css" />
         <link rel="stylesheet" href="../static/css/main.css" />

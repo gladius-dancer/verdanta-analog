@@ -7,6 +7,7 @@ let settings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
+  arrows: false,
 };
 
 function Brands() {
@@ -14,13 +15,6 @@ function Brands() {
     <section className="brand-wrap-layout2 bg-light-primary100">
       <div className="container">
         <Slider {...settings}>
-          <div className="brand-box-layout3">
-            <img
-              src="../../static/images/logo_1.png"
-              alt="brand"
-              className="img-fluid"
-            />
-          </div>
           <div className="brand-box-layout3">
             <img
               src="../../static/images/unnamed-1.jpg"

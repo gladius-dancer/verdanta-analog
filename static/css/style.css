@@ -1,4 +1,6 @@
-
+/**{
+  border: 1px #000 solid;
+}*/
 
 /*=======================================================================
 [01] Typography 
@@ -1488,6 +1490,13 @@ ul {
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
+
+.header-contact-layout2 ul{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
 @media only screen and (max-width: 1199px) {
   .header-contact-layout2 {
     -webkit-box-pack: center;
@@ -1498,8 +1507,8 @@ ul {
 .header-contact-layout2 ul li {
   font-size: 16px;
   display: inline-block;
-  margin-right: 30px;
-  padding-right: 30px;
+  margin-right: 15px;
+  padding-right: 15px;
   color: #444444;
   border-right: 1px solid #d7d7d7;
 }
@@ -1509,7 +1518,7 @@ ul {
   border-right: 0;
 }
 .header-contact-layout2 ul li .media i {
-  margin-top: 7px;
+  margin-top: 4px;
   color: #396cf0;
   font-size: 26px;
 }
@@ -1521,12 +1530,15 @@ ul {
   font-size: 16px;
 }
 .header-contact-layout2 ul li .media .media-body .info {
-  font-size: 16px;
+  font-size: 14px;
   position: relative;
   top: 6px;
   font-weight: 600;
+  white-space: nowrap;
+
 }
 .header-contact-layout2 ul li .media .media-body .info a{
+  white-space: nowrap;
   color: #000000;
 }
 @media only screen and (max-width: 767px) {
@@ -4217,11 +4229,17 @@ div ~ :last-child .call-to-action-box-layout5 {
   margin-right: 0;
 }
 .team-box-layout2 {
-  background-color: #ffffff;
-  padding: 40px 30px;
   margin-bottom: 30px;
 }
-.team-box-layout2:hover {
+
+.team-box-layout2 .team-box-inner{
+  background-color: #ffffff;
+  padding: 40px 30px;
+  width: 230px;
+  margin: 0 auto;
+}
+
+.team-box-layout2 .team-box-inner:hover {
   -webkit-box-shadow: 0px 5px 50px 0px rgba(220, 223, 225, 0.75);
   -moz-box-shadow: 0px 5px 50px 0px rgba(220, 223, 225, 0.75);
   box-shadow: 0px 5px 50px 0px rgba(220, 223, 225, 0.75);
@@ -6613,6 +6631,11 @@ div ~ :last-child .call-to-action-box-layout5 {
 .departments-box-layout3 {
   position: relative;
 }
+
+.departments-box-layout3 .slick-list{
+  padding-left: 12px;
+}
+
 .departments-box-layout3 .nav-wrap {
   margin-bottom: 26px;
   width: 100%;
@@ -6696,10 +6719,13 @@ div ~ :last-child .call-to-action-box-layout5 {
   overflow: hidden;
   -webkit-clip-path: ellipse(75% 75% at 25% 50%);
   clip-path: ellipse(75% 75% at 25% 50%);
+  height: 600px;
+  width: 60%;
 }
 @media only screen and (max-width: 1399px) {
   .departments-box-layout3 .single-item .media .item-img {
     width: 50%;
+    height: 600px;
   }
 }
 @media only screen and (max-width: 1199px) {
@@ -6708,6 +6734,7 @@ div ~ :last-child .call-to-action-box-layout5 {
     -webkit-clip-path: none;
     clip-path: none;
     width: 100%;
+    height: 600px;
   }
 }
 .departments-box-layout3 .single-item .media .media-body {
@@ -10331,7 +10358,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 =========================================================================*/
 .footer-top-wrap {
   background-color: #1f1f1f;
-  padding: 90px 0px 38px;
+  padding: 50px 0px 38px;
   border-bottom: 1px solid #333333;
 }
 .footer-box {
@@ -11336,11 +11363,28 @@ div ~ :last-child .call-to-action-box-layout5 {
 .mobile-info .col-12 {
   text-align: center;
   font-size: 16px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-right: 30px;
   color: #444444;
+  height: 100%;
   border-right: 1px solid #d7d7d7;
 }
+
+@media only screen and (max-width: 768px) {
+  .mobile-info .col-12 {
+    height: auto;
+  }
+
+  .mobile-info .col-12 .info{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+}
+
 .mobile-info .col-12:last-child {
   margin-right: 0;
   padding-right: 0;

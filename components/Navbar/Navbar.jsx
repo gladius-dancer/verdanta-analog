@@ -2,31 +2,12 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { useTranslation } from "next-i18next";
-import LangSwitcher from "@/components/i18n/LangSwitcher/LangSwitcher";
-import Modal from "@/components/Modal/Modal";
-import { Toast } from "@/components/Toast/lib/Toast";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
-import { rotate } from "next/dist/server/lib/squoosh/impl";
 
 function Navbar() {
-  const [search, setSearch] = useState(false);
-  const [modal, setmodal] = useState(false);
-  const { t } = useTranslation();
-  const dispatch = useDispatch();
-  const router = useRouter();
   const [mobileMenu, setMobileMenu] = useState(false);
   const [mobileInfo, setMobileInfo] = useState(false);
-
-  const handleModalOpen = () => {
-    setmodal(true);
-  };
-  const handleModalClose = () => {
-    setmodal(false);
-  };
-  const toggleSearch = () => {
-    setSearch((prev) => !prev);
-  };
 
   const toggleMobileMenu = () => {
     setMobileMenu((prev) => !prev);
@@ -129,32 +110,31 @@ function Navbar() {
             className="row info-mobile"
             style={{ height: mobileInfo ? "144px" : 0, transition: "0.7s" }}
           >
-            <div className="col-lg-4 col-md-4 col-sm-6 col-12 align-self-start">
+            <div className="col-lg-4 col-md-4 col-sm-12 col-12 align-self-start">
               <div className="media">
                 <div className="media-body space-sm">
                   <div className="title">Адрес</div>
-                  <div className="info">ул. Маннон Уйгур, дом 290.</div>
+                  <div className="info">г. Нукус ул. Танирхан, дом 22 а.</div>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-4 col-sm-6 col-12 align-items-center">
+            <div className="col-lg-4 col-md-4 col-sm-12 col-12 align-items-center">
               <div className="media">
                 <div className="media-body space-sm">
                   <div className="title">Телефон</div>
                   <div className="info">
-                    <a href="tel:+99871 249 66 33         +99871 249 66 77">
-                      +99871 249 66 33 +99871 249 66 77
-                    </a>
+                    <a href="tel:+998612297444">+99861 229 74 44</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-4 col-sm-6 col-12 align-items-end">
+            <div className="col-lg-4 col-md-4 col-sm-12 col-12 align-items-end">
               <div className="media">
                 <div className="media-body space-sm">
-                  <div className="title">�&nbsp;абочее время</div>
+                  <div className="title">Рабочее время</div>
                   <div className="info">
-                    Пн.-Пт. 09:00 - 17:00. Сб. 09:00 - 14:00.
+                    <div>Пн.-Пт. 09:00 - 17:00.</div>
+                    <div>Сб. 09:00 - 14:00.</div>
                   </div>
                 </div>
               </div>
@@ -184,9 +164,12 @@ function Navbar() {
         <header id="header_2">
           <div className="header-top-bar top-bar-border-bottom bg-light-primary100 d-none d-md-block">
             <div className="container">
-              <div className="row">
+              <div
+                className="row"
+                style={{ display: "flex", justifyContent: "space-between" }}
+              >
                 <div
-                  className="col-lg-3 col-md-3 logo-area-layout2"
+                  className="col-lg-2 col-md-2 logo-area-layout2"
                   style={{ display: "flex", justifyContent: "center" }}
                 >
                   <a href="/" className="temp-logo">
@@ -197,14 +180,16 @@ function Navbar() {
                     />
                   </a>
                 </div>
-                <div className="col-lg-9 col-md-9 col-12 header-contact-layout2">
+                <div className="header-contact-layout2">
                   <ul>
                     <li>
                       <div className="media">
                         <i className="fas fa-map-marker-alt"></i>
                         <div className="media-body space-sm">
                           <div className="info">
-                            <a href="/contact">ул. Маннон Уйгур, дом 290.</a>
+                            <a href="/contact">
+                              г. Нукус ул. Танирхан, дом 22 а.
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -214,9 +199,7 @@ function Navbar() {
                         <i className="fas fa-phone"></i>
                         <div className="media-body space-sm">
                           <div className="info">
-                            <a href="tel:+99871 249 66 33         +99871 249 66 77">
-                              +99871 249 66 33 +99871 249 66 77
-                            </a>
+                            <a href="tel:+998612297444">+99861 229 74 44</a>
                           </div>
                         </div>
                       </div>
@@ -286,7 +269,7 @@ function Navbar() {
                     </nav>
                   </div>
                 </div>
-                <div className="col-md-3">
+                {/*<div className="col-md-3">
                   <div className="header-action-items-layout2">
                     <ul>
                       <li className="d-none d-xl-block">
@@ -313,7 +296,7 @@ function Navbar() {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>

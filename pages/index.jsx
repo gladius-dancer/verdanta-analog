@@ -43,10 +43,10 @@ const Index = () => {
     centerMode: true,
     spaceBetween: 5,
     centerPadding: 10,
-    arrows: true,
+    arrows: false,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 770,
         settings: {
           slidesToShow: 3,
           centerPadding: 5,
@@ -106,7 +106,7 @@ const Index = () => {
                     <div className="container">
                       <div className="text-box">
                         <div className="slider-big-text">
-                          VEDANTA
+                          AYZIYA
                           <span>
                             {" "}
                             Офтальмологический центр доктора <br /> Акшей Кхера{" "}
@@ -138,7 +138,7 @@ const Index = () => {
                     <div className="container">
                       <div className="text-box">
                         <div className="slider-big-text">
-                          VEDANTA<span> Искусство возвращать зрение </span>
+                          AYZIYA<span> Искусство возвращать зрение </span>
                         </div>
                         <p className="slider-paragraph"></p>
                         <p>Офтальмологический центр доктора Акшей Кхера</p>
@@ -167,12 +167,12 @@ const Index = () => {
                 <h2 className="item-title">О клинике </h2>
                 <p></p>
                 <p style={{ textAlign: "justify" }}>
-                  Офтальмологическая клиника Vedanta предлагает
-                  квалифицированную медицинскую помощь по индивидуальным
-                  лечебным и профилактическим программам, призванным заботиться
-                  о Вашем зрении. Мы используем наиболее современное,
-                  соответствующее мировым стандартам, оборудование�&nbsp; для
-                  диагностики и�&nbsp; лечения заболеваний глаз.
+                  Офтальмологическая клиника Ayziya предлагает квалифицированную
+                  медицинскую помощь по индивидуальным лечебным и
+                  профилактическим программам, призванным заботиться о Вашем
+                  зрении. Мы используем наиболее современное, соответствующее
+                  мировым стандартам, оборудование для диагностики и лечения
+                  заболеваний глаз.
                 </p>
                 <p></p>
               </div>
@@ -525,8 +525,8 @@ const Index = () => {
                     </a>
                   </div>
                   <div className="item-content">
-                    <h3 className="item-title">Vedanta</h3>
-                    <span className="title-ctg">Vedanta</span>
+                    <h3 className="item-title">Ayziya</h3>
+                    <span className="title-ctg">Ayziya</span>
                   </div>
                 </div>
               </div>
@@ -548,8 +548,8 @@ const Index = () => {
                     </a>
                   </div>
                   <div className="item-content">
-                    <h3 className="item-title">�&nbsp;егистратура</h3>
-                    <span className="title-ctg">�&nbsp;егистратура</span>
+                    <h3 className="item-title">Регистратура</h3>
+                    <span className="title-ctg">Регистратура</span>
                   </div>
                 </div>
               </div>

@@ -12,7 +12,7 @@ function Comments() {
   return (
     <section
       className="testmonial-wrap-layout2 bg-common"
-      data-bg-image="/templates/vedanta/assets/img/testimonial/testimonial-bg1.jpg"
+      data-bg-image="/templates/ayziya/assets/img/testimonial/testimonial-bg1.jpg"
     >
       <div className="container">
         <Swiper
@@ -38,7 +38,7 @@ function Comments() {
               </div>
               <div className="item-content">
                 <p style={{ textAlign: "justify" }}>
-                  Хотела бы оставить отзыв о клинике Vedanta и выразить огромную
+                  Хотела бы оставить отзыв о клинике Ayziya и выразить огромную
                   благодарность докторам данной Клиники за внимательное
                   отношение , доброту и очень грамотный подход. Нас тепло
                   встретили, проконсультировали и лечили. За время пребывания в
@@ -65,9 +65,9 @@ function Comments() {
                   Глазное дно смотрят, проверяют давление, остроту зрения, есть
                   для этого вся аппаратура и знаний у врача достаточно. Не
                   жалею, что решила провериться, с врачом долго разговаривали,
-                  мне объясняли результаты и дали много ценных
-                  советов.�&nbsp;Vedanta - это действительно высокий уровень и
-                  профессионализм врачей. Мы остались очень довольны.
+                  мне объясняли результаты и дали много ценных советов.Ayziya -
+                  это действительно высокий уровень и профессионализм врачей. Мы
+                  остались очень довольны.
                 </p>
                 <h3 className="item-title">Нарбаева Н.А.</h3>
                 <h4 className="sub-title"></h4>

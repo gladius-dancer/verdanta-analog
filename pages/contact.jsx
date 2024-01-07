@@ -26,7 +26,7 @@ const Contact = () => {
             <div className="col-12">
               <div className="breadcrumbs-area">
                 <h1>
-                  <a href="/">Vedanta</a>
+                  <a href="/">Ayziya</a>
                 </h1>
               </div>
             </div>
@@ -39,7 +39,7 @@ const Contact = () => {
           <div className="google-map-area">
             <div id="googleMap" style={{ width: "100%", height: "496px" }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.090144002028!2d69.21513322925748!3d41.32277200587641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bed491fbfb7%3A0x1a6b03a4c374ee51!2sVedanta%20Medical!5e0!3m2!1sen!2s!4v1577535775412!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.090144002028!2d69.21513322925748!3d41.32277200587641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bed491fbfb7%3A0x1a6b03a4c374ee51!2sAyziya%20Medical!5e0!3m2!1sen!2s!4v1577535775412!5m2!1sen!2s"
                 frameborder="0"
                 style={{ border: 0, width: "100%", height: "100%" }}
                 allowfullscreen=""
@@ -144,7 +144,7 @@ const Contact = () => {
                     </li>
                     <li>
                       <i className="far fa-envelope"></i>
-                      <a href="mailto:admin@vedanta.uz">admin@vedanta.uz</a>
+                      <a href="mailto:admin@ayziya.uz">admin@ayziya.uz</a>
                     </li>
                     <li>
                       <i className="fas fa-phone"></i>{" "}

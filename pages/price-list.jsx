@@ -26,7 +26,7 @@ const PriceList = () => {
             <div className="col-12">
               <div className="breadcrumbs-area">
                 <h1>
-                  <a href="/">Vedanta</a>
+                  <a href="/">Ayziya</a>
                 </h1>
                 <ul>
                   <li>
@@ -163,7 +163,7 @@ const PriceList = () => {
                   </tbody>
                 </table>
 
-                <p>�&nbsp;</p>
+                <p></p>
                 <p></p>
               </div>
             </div>
@@ -374,7 +374,7 @@ const PriceList = () => {
                   </tbody>
                 </table>
 
-                <p>�&nbsp;</p>
+                <p></p>
                 <p></p>
               </div>
             </div>
@@ -456,7 +456,7 @@ const PriceList = () => {
                 </table>
 
                 <div style={{ marginLeft: "7.1pt" }}>
-                  <p>�&nbsp;</p>
+                  <p></p>
 
                   <p>
                     <span style={{ fontSize: "14px" }}>
@@ -716,7 +716,7 @@ const PriceList = () => {
                 </table>
 
                 <div style={{ marginLeft: "7.1pt" }}>
-                  <p>�&nbsp;</p>
+                  <p></p>
 
                   <p>
                     <span style={{ fontSize: "14px" }}>
@@ -758,169 +758,124 @@ const PriceList = () => {
                 >
                   <tbody>
                     <tr>
+                      <td>Экстракапсулярная экстракция катаракты без ИОЛ</td>
                       <td>
-                        Экстракапсулярная экстракция катаракты без
-                        ИОЛ�&nbsp;�&nbsp;
-                      </td>
-                      <td>
-                        <b>2.000.000 </b>�&nbsp; �&nbsp; �&nbsp; �&nbsp;
+                        <b>2.000.000 </b>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        Интракапсулярная экстракция катаракты без
-                        ИОЛ(ФЭК)�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;{" "}
-                        <b>�&nbsp;</b>
+                        Интракапсулярная экстракция катаракты без ИОЛ(ФЭК){" "}
+                        <b></b>
                       </td>
                       <td>
-                        <b>2.000.000�&nbsp;</b>
+                        <b>2.000.000</b>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <p>
-                          �&nbsp;епозиция ИОЛ�&nbsp;�&nbsp;�&nbsp;{" "}
-                          <b>
-                            �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                            �&nbsp; �&nbsp; �&nbsp; �&nbsp;�&nbsp;
-                          </b>
+                          епозиция ИОЛ <b></b>
                         </p>
                       </td>
                       <td>
                         <p>
-                          <strong>1.500.000�&nbsp;</strong>
+                          <strong>1.500.000</strong>
                           <strong></strong>
                         </p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        Центрация�&nbsp;�&nbsp;�&nbsp;�&nbsp;{" "}
-                        <span data-cke-marker="1">�&nbsp;</span>
+                        Центрация <span data-cke-marker="1"></span>
                       </td>
                       <td>
                         <p>
-                          <strong>1.300.000�&nbsp;</strong>
+                          <strong>1.300.000</strong>
                         </p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        Передняя
-                        витреоэктомия�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;
-                        <b>
-                          �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                          �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                          �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        </b>
+                        Передняя витреоэктомия
+                        <b></b>
                       </td>
                       <td>
                         <p>
-                          <strong>1.500.000�&nbsp;</strong>
+                          <strong>1.500.000</strong>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>ассечение вторичной катаракты</td>
+                      <td>
+                        <b>1.200.000</b>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        ассечение тяжей передней камеры <b></b>
+                      </td>
+                      <td>
+                        <p>
+                          <strong>1.200.000</strong>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Формирование зрачка</td>
+                      <td>
+                        <b>1.200.000</b>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Пластика радужки
+                        <span data-cke-marker="1"></span>
+                      </td>
+                      <td>
+                        <p>
+                          <strong>1.300.000</strong>
                         </p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        �&nbsp;�&nbsp;ассечение�&nbsp; вторичной
-                        катаракты�&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp;�&nbsp;
-                      </td>
-                      <td>
-                        <b>1.200.000�&nbsp;</b>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        �&nbsp;ассечение тяжей передней
-                        камеры�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;{" "}
-                        <b>
-                          �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                          �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                          �&nbsp; �&nbsp;�&nbsp;
-                        </b>
+                        Периферическая иридэктомия
+                        <b></b>
                       </td>
                       <td>
                         <p>
-                          <strong>1.200.000�&nbsp;</strong>
+                          <strong>1.500.000</strong>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Интравитреальное введение лекарственных средств</td>
+                      <td>
+                        <p>
+                          <strong>500.000</strong>
                         </p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        Формирование зрачка�&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                      </td>
-                      <td>
-                        <b>1.200.000�&nbsp;</b>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Пластика радужки�&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;�&nbsp;
-                        <span data-cke-marker="1">�&nbsp;</span>
+                        Кросслинкинг <span data-cke-marker="1"></span>
                       </td>
                       <td>
                         <p>
-                          <strong>1.300.000�&nbsp;</strong>
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Периферическая иридэктомия�&nbsp;
-                        �&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;
-                        <b>
-                          �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                          �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                          �&nbsp; �&nbsp; �&nbsp; �&nbsp;�&nbsp;
-                        </b>
-                      </td>
-                      <td>
-                        <p>
-                          <strong>1.500.000�&nbsp;</strong>
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Интравитреальное введение лекарственных средств�&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp;�&nbsp;
-                      </td>
-                      <td>
-                        <p>
-                          <strong>500.000�&nbsp;</strong>
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Кросслинкинг�&nbsp;�&nbsp;�&nbsp;{" "}
-                        <span data-cke-marker="1">�&nbsp;</span>
-                      </td>
-                      <td>
-                        <p>
-                          <strong>3.000.000�&nbsp;</strong>
+                          <strong>3.000.000</strong>
                         </p>
                       </td>
                     </tr>
                   </tbody>
                 </table>
 
-                <p>�&nbsp;</p>
+                <p></p>
 
-                <p>�&nbsp;</p>
+                <p></p>
 
-                <p>�&nbsp;</p>
+                <p></p>
                 <p></p>
               </div>
             </div>
@@ -961,61 +916,34 @@ const PriceList = () => {
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                        Удаление хрусталиковых масс�&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp;�&nbsp;
-                      </td>
+                      <td>Удаление хрусталиковых масс</td>
                       <td>
                         <b>1.500.000</b>
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                        Криопексия лечебная�&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;�&nbsp;
-                      </td>
+                      <td>Криопексия лечебная</td>
                       <td>
                         <b>1.200.000</b>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        Криопексия
-                        профилактическая�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;
-                        �&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;
-                        <span data-cke-marker="1">�&nbsp;</span>
+                        Криопексия профилактическая
+                        <span data-cke-marker="1"></span>
                       </td>
                       <td>
                         <b>1.200.000</b>
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                        Удаление опухоли века�&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                      </td>
+                      <td>Удаление опухоли века</td>
                       <td>
                         <b>1.500.000</b>
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                        Удаление птеригиума�&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp;
-                      </td>
+                      <td>Удаление птеригиума</td>
                       <td>
                         <p>
                           <strong>1.500.000</strong>
@@ -1032,19 +960,17 @@ const PriceList = () => {
                     </tr>
                     <tr>
                       <td>
-                        Первичная хирургическая обработка раны�&nbsp;без
-                        наложение швов
+                        Первичная хирургическая обработка раныбез наложение швов
                       </td>
                       <td>
                         <p>
-                          <b>�&nbsp;1.200.000�&nbsp;</b>
+                          <b>1.200.000</b>
                         </p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        Первичная хирургическая обработка раны�&nbsp;с
-                        наложением швов�&nbsp; �&nbsp;
+                        Первичная хирургическая обработка раныс наложением швов
                       </td>
                       <td>
                         <b>1.000.000</b>
@@ -1052,10 +978,8 @@ const PriceList = () => {
                     </tr>
                     <tr>
                       <td>
-                        �&nbsp;евизия операционной
-                        раны�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;
-                        �&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;
-                        <span data-cke-marker="1">�&nbsp;</span>
+                        евизия операционной раны
+                        <span data-cke-marker="1"></span>
                       </td>
                       <td>
                         <b>1.200.000</b>
@@ -1063,46 +987,29 @@ const PriceList = () => {
                     </tr>
                     <tr>
                       <td>
-                        Восстановление передней
-                        камеры�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;
-                        �&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;
-                        <span data-cke-marker="1">�&nbsp;</span>
+                        Восстановление передней камеры
+                        <span data-cke-marker="1"></span>
                       </td>
                       <td>
                         <b>1.200.000</b>
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                        Вымывание гифемы�&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;�&nbsp;
-                      </td>
+                      <td>Вымывание гифемы</td>
                       <td>
                         <b>1.200.000</b>
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                        Наложение швов�&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                        �&nbsp; �&nbsp; �&nbsp; �&nbsp;
-                      </td>
+                      <td>Наложение швов</td>
                       <td>
                         <b>850.000</b>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        �&nbsp;ассечение передних и задних
-                        синихий�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;
-                        �&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;�&nbsp;
-                        <span data-cke-marker="1">�&nbsp;</span>
+                        ассечение передних и задних синихий
+                        <span data-cke-marker="1"></span>
                       </td>
                       <td>
                         <b>1.200.000</b>
@@ -1111,7 +1018,7 @@ const PriceList = () => {
                   </tbody>
                 </table>
 
-                <p>�&nbsp;</p>
+                <p></p>
                 <p></p>
               </div>
             </div>
@@ -1150,7 +1057,7 @@ const PriceList = () => {
                   </tbody>
                 </table>
 
-                <p>�&nbsp;</p>
+                <p></p>
                 <p></p>
               </div>
             </div>
