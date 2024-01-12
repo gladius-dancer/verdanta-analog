@@ -103,7 +103,7 @@ function Footer() {
                 </div>
                 <div className="footer-opening-hours">
                   <ul>
-                    <li>Пн.-Пт. 09:00 - 17:00. Сб. 09:00 - 16:00.</li>
+                    <li>Пн. - Сб. 09:00 - 17:00.</li>
                     <li>Закрыто: Воскресенье</li>
                   </ul>
                 </div>

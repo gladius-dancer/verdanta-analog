@@ -315,7 +315,7 @@ const Index = () => {
                 <div className="media media-none--lg">
                   <div className="item-img">
                     <img
-                      src="../static/images/ayziya/C14A1053-min.jpg"
+                      src="../static/images/ayziya/C14A1043-min.jpg"
                       alt="department"
                       className="carousel-img-fluid"
                     />
@@ -405,7 +405,7 @@ const Index = () => {
                 <div className="media media-none--lg">
                   <div className="item-img">
                     <img
-                      src="../static/images/ayziya/C14A1053-min.jpg"
+                      src="../static/images/ayziya/C14A1043-min.jpg"
                       alt="department"
                       className="carousel-img-fluid"
                     />
@@ -495,8 +495,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* Departments Area End Here */}
-      {/* Progress Area Start Here */}
       <section className="progress-wrap-layout2 bg-overlay bg-overlay-primary80 bg-common parallaxie">
         <div className="container">
           <div className="row">
@@ -527,14 +525,8 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* Progress Area End Here */}
-      {/* Team Area Start Here */}
       <DoctorsSlider doctors={doctors} />
-      {/* Team Area End Here */}
-      {/* Testimonial Area Start Here */}
       <Comments />
-      {/* Testimonial Area End Here */}
-      {/* Gallery Area Start Here */}
       <section className="gallery-wrap-layout1 bg-accent100">
         <div className="container">
           <div className="section-heading heading-dark text-center heading-layout1">

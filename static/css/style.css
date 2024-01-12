@@ -5693,6 +5693,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   cursor: all-scroll;
 }
 .brand-box-layout3 img {
+  margin: auto auto;
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   -webkit-transition: all 0.5s ease-out;

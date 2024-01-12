@@ -17,7 +17,7 @@ function Modal({ isOpen, onRequestClose, children, modalClass }) {
       }}
     >
       <IconButton onClick={onRequestClose} className={cls.Close}>
-        <CloseIcon />
+        <CloseIcon sx={{ fontSize: 26 }} />
       </IconButton>
       {children}
     </ReactModal>

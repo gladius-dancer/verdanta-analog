@@ -103,7 +103,7 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <Link href="/tools">Оборудование</Link>
+              <Link href="/equipment">Оборудование</Link>
             </li>
             <li>
               <a href="/news">Новости</a>
@@ -145,8 +145,7 @@ function Navbar() {
                 <div className="media-body space-sm">
                   <div className="title">Рабочее время</div>
                   <div className="info">
-                    <div>Пн.-Пт. 09:00 - 17:00.</div>
-                    <div>Сб. 09:00 - 16:00.</div>
+                    <div>Пн. - Сб. 09:00 - 17:00.</div>
                   </div>
                 </div>
               </div>
@@ -210,9 +209,7 @@ function Navbar() {
                       <div className="media">
                         <i className="far fa-clock"></i>
                         <div className="media-body space-sm">
-                          <div className="info">
-                            Пн.-Пт. 09:00 - 17:00. Сб. 09:00 - 16:00.
-                          </div>
+                          <div className="info">Пн. - Сб. 09:00 - 17:00.</div>
                         </div>
                       </div>
                     </li>
@@ -279,7 +276,7 @@ function Navbar() {
                           </ul>
                         </li>
                         <li>
-                          <a href="/tools">Оборудование</a>
+                          <a href="/equipment">Оборудование</a>
                         </li>
                         <li>
                           <a href="/news">Новости</a>

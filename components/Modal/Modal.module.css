@@ -1,6 +1,6 @@
 .Modal{
     position: fixed;
-    z-index: 1001;
+    z-index: 2000;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -12,11 +12,12 @@
     z-index: 10000;
     right: 20px;
     top: 20px;
+    font-size: 26px;
 }
 
 
 .ModalContainer{
-    width: 800px;
+    width: 700px;
     margin: 0 auto;
     padding: 5px;
 }

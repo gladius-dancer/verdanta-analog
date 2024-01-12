@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const Tools = () => {
+const Equipment = () => {
   const { t } = useTranslation();
   const [domLoaded, setDomLoaded] = useState(false);
 
@@ -34,7 +34,7 @@ const Tools = () => {
                     <Link href="/about">О клинике</Link>
                   </li>
                   <li>
-                    <Link href="/tools">Оборудование</Link>
+                    <Link href="/equipment">Оборудование</Link>
                   </li>
                 </ul>
               </div>
@@ -57,14 +57,14 @@ const Tools = () => {
                   />
                   <div className="item-content">
                     <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/stellaris-pc/">
+                      <Link href="/equipment/e1">
                         Appa YAG Лазер, модель 307
-                      </a>
+                      </Link>
                     </h3>
                     <p></p>
-                    <a href="/" className="item-btn">
+                    <Link href="/equipment/e1" className="item-btn">
                       Подробно
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -81,14 +81,37 @@ const Tools = () => {
                   />
                   <div className="item-content">
                     <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/stellaris-pc/">
+                      <Link href="/equipment/e2">
                         Huvitz Auto-Ref Keratometer HRK-1
-                      </a>
+                      </Link>
                     </h3>
                     <p></p>
-                    <a href="/" className="item-btn">
+                    <Link href="/equipment/e2" className="item-btn">
                       Подробно
-                    </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-6 col-md-6 col-12">
+              <div className="departments-box-layout5">
+                <div className="item-img">
+                  <img
+                    src="../static/images/tools/Carl%20Zeiss%20ZIESS%20VISU%20200%20Operating%20Microscope.jpg"
+                    alt="department"
+                    className="img-fluid"
+                    style={{ height: "270px" }}
+                  />
+                  <div className="item-content">
+                    <h3 className="item-title title-bar-primary3">
+                      <Link href="/equipment/e3">
+                        Carl Zeiss ZIESS VISU 200 Operating Microscope
+                      </Link>
+                    </h3>
+                    <p></p>
+                    <Link href="/equipment/e3" className="item-btn">
+                      Подробно
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -105,14 +128,14 @@ const Tools = () => {
                   />
                   <div className="item-content">
                     <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/stellaris-pc/">
+                      <Link href="/equipment/e4">
                         Huvitz HS-5000 5x Slit Lamp Microscope
-                      </a>
+                      </Link>
                     </h3>
                     <p></p>
-                    <a href="/" className="item-btn">
+                    <Link href="/equipment/e4" className="item-btn">
                       Подробно
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -129,14 +152,14 @@ const Tools = () => {
                   />
                   <div className="item-content">
                     <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/stellaris-pc/">
+                      <Link href="/equipment/e5">
                         Huvitz Non Contact Tonometer HNT-1
-                      </a>
+                      </Link>
                     </h3>
                     <p></p>
-                    <a href="/" className="item-btn">
+                    <Link href="/equipment/e5" className="item-btn">
                       Подробно
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -153,14 +176,14 @@ const Tools = () => {
                   />
                   <div className="item-content">
                     <h3 className="item-title title-bar-primary3">
-                      <a href="/tools/stellaris-pc/">
+                      <Link href="/equipment/e6">
                         Opthalmic Phacoemulsifier - Appasamy
-                      </a>
+                      </Link>
                     </h3>
                     <p></p>
-                    <a href="/" className="item-btn">
+                    <Link href="/equipment/e6" className="item-btn">
                       Подробно
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -172,4 +195,4 @@ const Tools = () => {
   );
 };
 
-export default Tools;
+export default Equipment;

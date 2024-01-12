@@ -198,8 +198,8 @@ const Contact = () => {
                 <div className="contact-info">
                   <ul>
                     <li>
-                      <i className="fas fa-map-marker-alt"></i>ул. Маннон Уйгур,
-                      дом 290.
+                      <i className="fas fa-map-marker-alt"></i>г. Нукус ул.
+                      Танирхан, дом 22 а.
                     </li>
                     <li>
                       <i className="fas fa-phone"></i>

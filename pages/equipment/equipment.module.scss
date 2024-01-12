@@ -1,0 +1,39 @@
+.image{
+  max-height: 500px;
+  width: auto;
+  margin: 0 auto;
+  padding: 70px 0 40px 0;
+  display: block;
+}
+
+.name{
+  text-align: center;
+  font-weight: 700;
+}
+
+.table{
+  width: 100%;
+  td, th{
+    font-size: 14px;
+    padding: 12px 5px;
+    border: 1px #2f2d2d solid;
+
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .image{
+    padding: 100px 0 30px 0;
+  }
+
+  .table{
+    width: 100%;
+    td, th{
+      font-size: 12px;
+      padding: 12px 5px;
+      border: 1px #2f2d2d solid;
+
+    }
+  }
+
+}
