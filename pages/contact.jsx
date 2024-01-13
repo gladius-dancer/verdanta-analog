@@ -60,10 +60,9 @@ const Contact = () => {
       <section
         className="inner-page-banner bg-common inner-page-top-margin"
         style={{
-          background:
+          backgroundImage:
             "url(../static/images/laser-eye-surgery-what-you-need-to-know.jpeg)",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "right",
         }}
       >
         <div className="container">

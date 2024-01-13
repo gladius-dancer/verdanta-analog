@@ -9490,7 +9490,12 @@ div ~ :last-child .call-to-action-box-layout5 {
 .inner-page-banner {
   display: block;
   padding: 9.2rem 0;
+  background-position: center right;
+
 }
+
+
+
 .inner-page-banner .breadcrumbs-area {
   position: relative;
   z-index: 1;
@@ -9501,6 +9506,11 @@ div ~ :last-child .call-to-action-box-layout5 {
   font-size: 3.6rem;
 }
 @media only screen and (max-width: 767px) {
+
+/*  .inner-page-banner {
+    background-position: 60% 0;
+  }*/
+
   .inner-page-banner .breadcrumbs-area h1 {
     margin-bottom: 0;
   }
