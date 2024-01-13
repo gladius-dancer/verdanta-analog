@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import MainController from "@/components/MainController";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import parse from "html-react-parser";
 import { GetDoctorsService } from "@/services/doctors/GetDoctorsService";
+import cls from "./Doctor.module.scss";
 
 export default function SingleDoctor() {
   const dispatch = useDispatch();
@@ -14,8 +13,6 @@ export default function SingleDoctor() {
   const doctors = useSelector((state) => state?.doctors?.doctors);
 
   const singleDoctor = doctors.find((item) => String(item.id) === id);
-
-  console.log(singleDoctor);
 
   useEffect(() => {
     dispatch(GetDoctorsService());
@@ -28,13 +25,17 @@ export default function SingleDoctor() {
           <div className="vc_column-inner ">
             <div
               className="wpb_wrapper"
-              style={{ paddingBottom: 50, paddingTop: 50 }}
+              style={{ paddingBottom: 50, paddingTop: 120 }}
             >
               {!!singleDoctor && (
                 <>
-                  <img src={singleDoctor?.picture} alt="" />
-                  <h3 style={{ marginTop: 30 }}>{singleDoctor?.name}</h3>
-                  <p style={{ marginTop: 15 }}>
+                  <div className={cls.image}>
+                    <img src={singleDoctor?.picture} alt="" />
+                  </div>
+                  <h3 className={cls.title} style={{ marginTop: 30 }}>
+                    {singleDoctor?.name}
+                  </h3>
+                  <p className={cls.description} style={{ marginTop: 15 }}>
                     {parse(singleDoctor?.description)}
                   </p>
                 </>

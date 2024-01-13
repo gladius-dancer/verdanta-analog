@@ -6633,6 +6633,9 @@ div ~ :last-child .call-to-action-box-layout5 {
 .departments-box-layout3 {
   position: relative;
 }
+.departments-box-layout3 .carousel-nav .slick-list .slick-track{
+    left: 10px!important;
+}
 
 .departments-box-layout3 .nav-wrap {
   margin-bottom: 26px;
@@ -6720,36 +6723,58 @@ div ~ :last-child .call-to-action-box-layout5 {
   height: 438px;
   width: 70%;
 }
-@media only screen and (max-width: 1399px) {
+
+@media only screen and (max-width: 1199px){
   .departments-box-layout3 .single-item .media .item-img {
-    width: 50%;
-    height: 600px;
+    overflow: hidden;
+    -webkit-clip-path: ellipse(75% 75% at 25% 50%);
+    clip-path: ellipse(75% 90% at 25% 50%);
+    height: 400px;
+    width: 70%;
   }
 }
-@media only screen and (max-width: 1199px) {
+
+@media only screen and (max-width: 991px){
+
+  .departments-box-layout3 .single-item .media{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .departments-box-layout3 .single-item .media .item-img {
-    overflow: inherit;
-    -webkit-clip-path: none;
+    overflow: hidden;
     clip-path: none;
+    height: 300px;
     width: 100%;
-    height: 600px;
   }
 }
+
+@media only screen and (max-width: 470px){
+
+  .departments-box-layout3 .single-item .media{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .departments-box-layout3 .single-item .media .media-body{
+    padding: 0 5rem 5rem 5rem!important;
+  }
+
+  .departments-box-layout3 .single-item .media .item-img {
+    overflow: hidden;
+    clip-path: none;
+    height: 300px;
+    width: 100%;
+  }
+}
+
 .departments-box-layout3 .single-item .media .media-body {
   padding: 5rem;
   margin-left: 0!important;
 }
-@media only screen and (max-width: 1399px) {
-  .departments-box-layout3 .single-item .media .media-body {
-    padding: 2rem;
-    margin-left: 0!important;
-  }
-}
-@media only screen and (max-width: 1199px) {
-  .departments-box-layout3 .single-item .media .media-body {
-    padding: 4rem 5rem 5rem;
-  }
-}
+
 .departments-box-layout3 .single-item .media .media-body .item-title {
   font-size: 30px;
   color: #ffffff;
@@ -6863,6 +6888,9 @@ div ~ :last-child .call-to-action-box-layout5 {
   font-size: 18rem;
   color: #295de8;
 }
+
+/*////////////////////////////////////////////////////////////////////////////////*/
+
 .departments-box-layout4 {
   margin-bottom: 20px;
   padding: 25px 35px;

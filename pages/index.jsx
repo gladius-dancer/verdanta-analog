@@ -10,14 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
-import {
-  A11y,
-  Autoplay,
-  EffectFade,
-  FreeMode,
-  Navigation,
-  Thumbs,
-} from "swiper/modules";
+import { A11y, Autoplay, EffectFade, Navigation } from "swiper/modules";
 import Slider from "react-slick";
 import Brands from "@/components/Brands/Brands";
 import Comments from "@/components/Comments/Comments";
@@ -270,6 +263,7 @@ const Index = () => {
               ref={(slider) => (syncedSliderRef.current = slider)}
               afterChange={navAfterChange}
               className="nav-wrap carousel-nav"
+              style={{ background: "#fff" }}
             >
               <div className="main-nav-item">
                 <i className="flaticon-eye"></i>
@@ -310,9 +304,10 @@ const Index = () => {
               ref={(slider) => (mainSliderRef.current = slider)}
               afterChange={mainAfterChange}
               className="carousel-content"
+              style={{ marginTop: 10 }}
             >
               <div className="single-item">
-                <div className="media media-none--lg">
+                <div className="media ">
                   <div className="item-img">
                     <img
                       src="../static/images/ayziya/C14A1043-min.jpg"
@@ -323,12 +318,12 @@ const Index = () => {
                   <div className="media-body">
                     <h2 className="item-title">Оперативное лечение</h2>
                     <p></p>
-                    <a
-                      href="/services/operativnoe-lechenie/"
+                    <Link
+                      href="/services/surgical-treatment"
                       className="item-btn"
                     >
                       Подробно{" "}
-                    </a>
+                    </Link>
                     <div className="ctg-item-icon">
                       <i className="flaticon-eye"></i>
                     </div>
@@ -336,7 +331,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="single-item">
-                <div className="media media-none--lg">
+                <div className="media ">
                   <div className="item-img">
                     <img
                       src="../static/images/ayziya/C14A0847-min.jpg"
@@ -347,9 +342,9 @@ const Index = () => {
                   <div className="media-body">
                     <h2 className="item-title">Обследование</h2>
                     <p></p>
-                    <a href="/services/obsledovanie/" className="item-btn">
+                    <Link href="/services/survey" className="item-btn">
                       Подробно{" "}
-                    </a>
+                    </Link>
                     <div className="ctg-item-icon">
                       <i className="flaticon-eye"></i>
                     </div>
@@ -357,7 +352,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="single-item">
-                <div className="media media-none--lg">
+                <div className="media ">
                   <div className="item-img">
                     <img
                       src="../static/images/ayziya/C14A0759-min.jpg"
@@ -368,12 +363,12 @@ const Index = () => {
                   <div className="media-body">
                     <h2 className="item-title">Консультация офтальмолога</h2>
                     <p></p>
-                    <a
-                      href="/services/konsultaciya-oftalmologa/"
+                    <Link
+                      href="/services/surgical-treatment"
                       className="item-btn"
                     >
                       Подробно{" "}
-                    </a>
+                    </Link>
                     <div className="ctg-item-icon">
                       <i className="flaticon-eye"></i>
                     </div>
@@ -381,7 +376,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="single-item">
-                <div className="media media-none--lg">
+                <div className="media ">
                   <div className="item-img">
                     <img
                       src="../static/images/ayziya/C14A0998-min.jpg"
@@ -392,9 +387,9 @@ const Index = () => {
                   <div className="media-body">
                     <h2 className="item-title">Диагностика</h2>
                     <p></p>
-                    <a href="/services/diagnostika/" className="item-btn">
+                    <Link href="/services/diagnostics" className="item-btn">
                       Подробно{" "}
-                    </a>
+                    </Link>
                     <div className="ctg-item-icon">
                       <i className="flaticon-eye"></i>
                     </div>
@@ -402,7 +397,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="single-item">
-                <div className="media media-none--lg">
+                <div className="media ">
                   <div className="item-img">
                     <img
                       src="../static/images/ayziya/C14A1043-min.jpg"
@@ -413,12 +408,12 @@ const Index = () => {
                   <div className="media-body">
                     <h2 className="item-title">Оперативное лечение</h2>
                     <p></p>
-                    <a
-                      href="/services/operativnoe-lechenie/"
+                    <Link
+                      href="/services/surgical-treatment"
                       className="item-btn"
                     >
                       Подробно{" "}
-                    </a>
+                    </Link>
                     <div className="ctg-item-icon">
                       <i className="flaticon-eye"></i>
                     </div>
@@ -426,7 +421,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="single-item">
-                <div className="media media-none--lg">
+                <div className="media ">
                   <div className="item-img">
                     <img
                       src="../static/images/ayziya/C14A0847-min.jpg"
@@ -437,9 +432,9 @@ const Index = () => {
                   <div className="media-body">
                     <h2 className="item-title">Обследование</h2>
                     <p></p>
-                    <a href="/services/obsledovanie/" className="item-btn">
+                    <Link href="/services/survey" className="item-btn">
                       Подробно{" "}
-                    </a>
+                    </Link>
                     <div className="ctg-item-icon">
                       <i className="flaticon-eye"></i>
                     </div>
@@ -447,7 +442,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="single-item">
-                <div className="media media-none--lg">
+                <div className="media ">
                   <div className="item-img">
                     <img
                       src="../static/images/ayziya/C14A0759-min.jpg"
@@ -458,12 +453,12 @@ const Index = () => {
                   <div className="media-body">
                     <h2 className="item-title">Консультация офтальмолога</h2>
                     <p></p>
-                    <a
-                      href="/services/konsultaciya-oftalmologa/"
+                    <Link
+                      href="/services/surgical-treatment"
                       className="item-btn"
                     >
                       Подробно{" "}
-                    </a>
+                    </Link>
                     <div className="ctg-item-icon">
                       <i className="flaticon-eye"></i>
                     </div>
@@ -471,7 +466,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="single-item">
-                <div className="media media-none--lg">
+                <div className="media ">
                   <div className="item-img">
                     <img
                       src="../static/images/ayziya/C14A0998-min.jpg"
@@ -482,9 +477,9 @@ const Index = () => {
                   <div className="media-body">
                     <h2 className="item-title">Диагностика</h2>
                     <p></p>
-                    <a href="/services/diagnostika/" className="item-btn">
+                    <Link href="/services/diagnostics" className="item-btn">
                       Подробно{" "}
-                    </a>
+                    </Link>
                     <div className="ctg-item-icon">
                       <i className="flaticon-eye"></i>
                     </div>
