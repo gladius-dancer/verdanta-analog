@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import MainController from "@/components/MainController";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { GetNewsService } from "@/services/news/GetNews";
 import parse from "html-react-parser";
+import cls from "./News.module.scss";
 
 export default function SingleNews() {
   const dispatch = useDispatch();
@@ -28,13 +27,17 @@ export default function SingleNews() {
           <div className="vc_column-inner ">
             <div
               className="wpb_wrapper"
-              style={{ paddingBottom: 50, paddingTop: 50 }}
+              style={{ paddingBottom: 50, paddingTop: 120 }}
             >
               {!!singleNews && (
                 <>
-                  <img src={singleNews?.image} alt="" />
-                  <h3 style={{ marginTop: 30 }}>{singleNews?.title}</h3>
-                  <p style={{ marginTop: 15 }}>{parse(singleNews?.content)}</p>
+                  <img className={cls.image} src={singleNews?.image} alt="" />
+                  <h3 className={cls.title} style={{ marginTop: 30 }}>
+                    {singleNews?.title}
+                  </h3>
+                  <p className={cls.discription} style={{ marginTop: 15 }}>
+                    {parse(singleNews?.content)}
+                  </p>
                 </>
               )}
             </div>

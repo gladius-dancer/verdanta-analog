@@ -7,13 +7,12 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetNewsService } from "@/services/news/GetNews";
 import Link from "next/link";
+import cls from "./news/News.module.scss";
 
 const News = () => {
   const [domLoaded, setDomLoaded] = useState(false);
   const dispatch = useDispatch();
   const news = useSelector((state) => state.news.news);
-
-  console.log(news);
 
   useEffect(() => {
     setDomLoaded(true);
@@ -56,19 +55,15 @@ const News = () => {
               <div className=" col-xl-4 col-lg-4 col-md-6 col-sm-6" key={key}>
                 <div className="blog-box-layout2">
                   <div className="item-img">
-                    <a href="/news/dilemma-koronavirusnoi-epohi-kak-sdelat-tak-chtobi-pri-noshenii-maski-ne-zapotevali-ochki/">
+                    <div className={cls.imageInner}>
                       <img src={item?.image} className="img-fluid" />
-                    </a>
+                    </div>
                   </div>
                   <div className="item-content">
                     <div className="post-date">
                       {new Date(item?.created_at).toLocaleDateString()}
                     </div>
-                    <h3 className="item-title">
-                      <a href="/news/dilemma-koronavirusnoi-epohi-kak-sdelat-tak-chtobi-pri-noshenii-maski-ne-zapotevali-ochki/">
-                        {item?.title}
-                      </a>
-                    </h3>
+                    <h3 className="item-title">{item?.title}</h3>
                     <div className="post-actions-wrapper">
                       <ul>
                         <li>

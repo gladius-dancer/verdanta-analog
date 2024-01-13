@@ -1,0 +1,32 @@
+.imageInner{
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  img{
+    width: 100%;
+  }
+}
+
+.image{
+  margin: 0 auto;
+  max-width: 650px;
+  max-height: 450px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .image {
+    max-width: 100%;
+  }
+}
