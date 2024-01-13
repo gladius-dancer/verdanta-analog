@@ -6780,7 +6780,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   .departments-box-layout3 .single-item .media .item-img {
     overflow: hidden;
     clip-path: none;
-    height: 300px;
+    height: 250px;
     width: 100%;
   }
 }
@@ -7859,7 +7859,35 @@ div ~ :last-child .call-to-action-box-layout5 {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  width: 316.66px;
 }
+
+@media only screen and (max-width: 1199px){
+  .gallery-box-layout1 {
+    width: 289.98px;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .gallery-box-layout1 {
+    width: 320px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .gallery-box-layout1 {
+    width: 240px;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  .gallery-box-layout1 {
+    width: 100%;
+  }
+}
+
+
+
 .gallery-box-layout1:after {
   opacity: 0;
   visibility: hidden;
