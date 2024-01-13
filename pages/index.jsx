@@ -495,6 +495,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+
       <section className="progress-wrap-layout2 bg-overlay bg-overlay-primary80 bg-common parallaxie">
         <div className="container">
           <div className="row">

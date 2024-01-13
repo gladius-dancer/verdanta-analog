@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -7,75 +7,334 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
+import cls from "./Comments.module.scss";
+import clsModal from "@/components/Modal/Modal.module.css";
+import Modal from "@/components/Modal/Modal";
 
 function Comments() {
+  const [modal, setModal] = useState({ status: false, id: null });
+
   return (
     <section
       className="testmonial-wrap-layout2 bg-common"
       data-bg-image="/templates/ayziya/assets/img/testimonial/testimonial-bg1.jpg"
     >
       <div className="container">
+        <div className="section-heading heading-dark text-center heading-layout1">
+          <h2>Комментарий</h2>
+          <p></p>
+        </div>
         <Swiper
           className="rc-carousel dot-control-layout2"
           modules={[Navigation, A11y, Autoplay]}
-          spaceBetween={30}
           slidesPerGroup={1}
           slidesPerView={1}
           loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
+          // autoplay={{
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          // }}
+          breakpoints={{
+            // when window width is >= 640px
+            1199: {
+              slidesPerView: 3,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 2,
+            },
           }}
         >
           <SwiperSlide>
-            <div className="testmonial-box-layout1">
-              <div className="item-img">
-                <img
-                  src="../../static/images/b055eef2455bc9cddec6994e8160c3ba.jpg"
-                  className="img-fulid rounded-circle"
-                  alt="Robert Addison"
-                />
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    width: 300,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/video_2024-01-13_13-46-07.mp4"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({
+                        id: "video_2024-01-13_13-46-07.mp4",
+                        status: true,
+                      })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
               </div>
-              <div className="item-content">
-                <p style={{ textAlign: "justify" }}>
-                  Хотела бы оставить отзыв о клинике Ayziya и выразить огромную
-                  благодарность докторам данной Клиники за внимательное
-                  отношение , доброту и очень грамотный подход. Нас тепло
-                  встретили, проконсультировали и лечили. За время пребывания в
-                  клинике у нас было все необходимое , мед.персонал отзывчивый.
-                  Огромное спасибо доктору Акшей Кхера - очень грамотный доктор.
-                </p>
-                <h3 className="item-title">Халилова К.Н.</h3>
-                <h4 className="sub-title"></h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    width: 300,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/video_2024-01-13_13-45-35.mp4"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({
+                        id: "video_2024-01-13_13-45-35.mp4",
+                        status: true,
+                      })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    width: 300,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/video_2024-01-13_13-44-53.mp4"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({
+                        id: "video_2024-01-13_13-44-53.mp4",
+                        status: true,
+                      })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    width: 300,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/video_2024-01-13_13-45-47.mp4"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({
+                        id: "video_2024-01-13_13-45-47.mp4",
+                        status: true,
+                      })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    width: 300,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/IMG_5058.MP4"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({ id: "IMG_5058.MP4", status: true })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    width: 300,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/IMG_5341.MP4"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({ id: "IMG_5341.MP4", status: true })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    width: 300,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/IMG_4966.MP4"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({ id: "IMG_4966.MP4", status: true })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="testmonial-box-layout1">
-              <div className="item-img">
-                <img
-                  src="../../static/images/f267de58275174af61b8944a09db282b.jpg"
-                  className="img-fulid rounded-circle"
-                  alt="Robert Addison"
-                />
-              </div>
-              <div className="item-content">
-                <p style={{ textAlign: "justify" }}>
-                  Понравилось, что проводят именно комплексную диагностику глаз.
-                  Глазное дно смотрят, проверяют давление, остроту зрения, есть
-                  для этого вся аппаратура и знаний у врача достаточно. Не
-                  жалею, что решила провериться, с врачом долго разговаривали,
-                  мне объясняли результаты и дали много ценных советов.Ayziya -
-                  это действительно высокий уровень и профессионализм врачей. Мы
-                  остались очень довольны.
-                </p>
-                <h3 className="item-title">Нарбаева Н.А.</h3>
-                <h4 className="sub-title"></h4>
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    width: 300,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/IMG_5252.MP4"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({ id: "IMG_5252.MP4", status: true })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
           </SwiperSlide>
         </Swiper>
       </div>
+      <Modal
+        isOpen={modal.status}
+        onRequestClose={() => setModal({ id: null, status: false })}
+        modalClass={clsModal.Modal}
+      >
+        <div className={clsModal.ModalContainer}>
+          <video
+            autoPlay={true}
+            controls
+            className={clsModal.video}
+            src={`../../static/video/${modal.id}`}
+          ></video>
+        </div>
+      </Modal>
     </section>
   );
 }
