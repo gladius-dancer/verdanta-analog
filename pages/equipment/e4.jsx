@@ -2,7 +2,7 @@ import React from "react";
 import MainController from "@/components/MainController";
 import cls from "./equipment.module.scss";
 
-function E4() {
+export default function E4() {
   return (
     <MainController>
       <div className="container">
@@ -19,7 +19,6 @@ function E4() {
               <h3 style={{ marginTop: 30 }} className={cls.name}>
                 Huvitz HS-5000 5x Slit Lamp Microscope
               </h3>
-              <p style={{ marginTop: 15 }} className={cls.discription}></p>
             </div>
           </div>
         </div>
@@ -27,5 +26,3 @@ function E4() {
     </MainController>
   );
 }
-
-export default E1;

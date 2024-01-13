@@ -2,7 +2,7 @@ import React from "react";
 import MainController from "@/components/MainController";
 import cls from "./equipment.module.scss";
 
-function E6() {
+export default function E6() {
   return (
     <MainController>
       <div className="container">
@@ -19,7 +19,6 @@ function E6() {
               <h3 style={{ marginTop: 30 }} className={cls.name}>
                 Opthalmic Phacoemulsifier - Appasamy
               </h3>
-              <p style={{ marginTop: 15 }} className={cls.discription}></p>
             </div>
           </div>
         </div>
@@ -27,5 +26,3 @@ function E6() {
     </MainController>
   );
 }
-
-export default E1;

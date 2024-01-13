@@ -2,7 +2,7 @@ import React from "react";
 import MainController from "@/components/MainController";
 import cls from "./equipment.module.scss";
 
-function E2() {
+export default function E2() {
   return (
     <MainController>
       <div className="container">
@@ -19,7 +19,6 @@ function E2() {
               <h3 style={{ marginTop: 30 }} className={cls.name}>
                 Huvitz Auto-Ref Keratometer HRK-1
               </h3>
-              <p style={{ marginTop: 15 }} className={cls.discription}></p>
             </div>
           </div>
         </div>
@@ -27,5 +26,3 @@ function E2() {
     </MainController>
   );
 }
-
-export default E1;
