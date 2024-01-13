@@ -1434,6 +1434,7 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-left: 22px;
 }
 .header-contact-layout1 {
   min-height: 50px;
@@ -1489,6 +1490,7 @@ ul {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  margin-right: 25px;
 }
 
 .header-contact-layout2 ul{
@@ -1702,7 +1704,7 @@ ul {
   box-sizing: border-box;
 }
 .mean-container .mean-bar .mobile-menu-nav-back {
-  padding-left: 15px;
+  /*padding-left: 15px;*/
   border-bottom: 1px solid #b2b2b2;
   position: relative;
   text-align: center;
@@ -6745,12 +6747,25 @@ div ~ :last-child .call-to-action-box-layout5 {
   .departments-box-layout3 .single-item .media .item-img {
     overflow: hidden;
     clip-path: none;
+    height: 400px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .departments-box-layout3 .single-item .media .item-img {
+    overflow: hidden;
+    clip-path: none;
     height: 300px;
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 470px){
+
+    .departments-box-layout3 .carousel-nav .slick-list .slick-track{
+      left: 0!important;
+    }
 
   .departments-box-layout3 .single-item .media{
     display: flex;
@@ -7432,6 +7447,13 @@ div ~ :last-child .call-to-action-box-layout5 {
 .testmonial-wrap-layout2 {
   padding: 100px 0px;
 }
+
+@media only screen and (max-width: 575px) {
+  .testmonial-wrap-layout2 {
+    padding: 50px 0px;
+  }
+}
+
 .testmonial-box-layout1 {
   text-align: center;
 }

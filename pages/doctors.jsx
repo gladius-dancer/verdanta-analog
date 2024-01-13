@@ -70,18 +70,33 @@ const Doctors = () => {
         <div className="container">
           <div className="isotope-wrap" style={{ marginTop: 50 }}>
             <div className="row featuredContainer" id="no-equal-gallery">
-              {doctors?.map((doctor, key) => (
-                <div
-                  className="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12"
-                  key={key}
-                >
-                  <div className="team-box-layout2">
-                    <div className="item-img">
-                      <div className="img-fluid rounded-circle">
-                        <img src={doctor?.picture} />
+              {domLoaded &&
+                doctors?.map((doctor, key) => (
+                  <div
+                    className="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12"
+                    key={key}
+                  >
+                    <div className="team-box-layout2">
+                      <div className="item-img">
+                        <div className="img-fluid rounded-circle">
+                          <img src={doctor?.picture} />
+                        </div>
+                        <ul className="item-icon">
+                          <li>
+                            <Link
+                              href={{
+                                pathname: "doctor/[id]",
+                                query: { id: doctor?.id },
+                              }}
+                              className="item-btn"
+                            >
+                              <i className="fas fa-plus"></i>
+                            </Link>
+                          </li>
+                        </ul>
                       </div>
-                      <ul className="item-icon">
-                        <li>
+                      <div className="item-content">
+                        <h4 className="item-title">
                           <Link
                             href={{
                               pathname: "doctor/[id]",
@@ -89,28 +104,14 @@ const Doctors = () => {
                             }}
                             className="item-btn"
                           >
-                            <i className="fas fa-plus"></i>
+                            {doctor?.name}
                           </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="item-content">
-                      <h4 className="item-title">
-                        <Link
-                          href={{
-                            pathname: "doctor/[id]",
-                            query: { id: doctor?.id },
-                          }}
-                          className="item-btn"
-                        >
-                          {doctor?.name}
-                        </Link>
-                      </h4>
-                      <p></p>
+                        </h4>
+                        <p></p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </div>

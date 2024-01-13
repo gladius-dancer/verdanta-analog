@@ -30,18 +30,24 @@ function Comments() {
           slidesPerGroup={1}
           slidesPerView={1}
           loop={true}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // }}
+          /* autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}*/
           breakpoints={{
             // when window width is >= 640px
             1199: {
               slidesPerView: 3,
             },
             // when window width is >= 768px
-            768: {
+            992: {
+              slidesPerView: 3,
+            },
+            575: {
               slidesPerView: 2,
+            },
+            420: {
+              slidesPerView: 1,
             },
           }}
         >
@@ -51,7 +57,6 @@ function Comments() {
                 <div
                   className="gallery-box-layout1"
                   style={{
-                    width: 300,
                     marginLeft: "auto",
                     marginRight: "auto",
                   }}
@@ -87,7 +92,6 @@ function Comments() {
                 <div
                   className="gallery-box-layout1"
                   style={{
-                    width: 300,
                     marginLeft: "auto",
                     marginRight: "auto",
                   }}
@@ -123,7 +127,6 @@ function Comments() {
                 <div
                   className="gallery-box-layout1"
                   style={{
-                    width: 300,
                     marginLeft: "auto",
                     marginRight: "auto",
                   }}
@@ -159,7 +162,6 @@ function Comments() {
                 <div
                   className="gallery-box-layout1"
                   style={{
-                    width: 300,
                     marginLeft: "auto",
                     marginRight: "auto",
                   }}
@@ -195,7 +197,6 @@ function Comments() {
                 <div
                   className="gallery-box-layout1"
                   style={{
-                    width: 300,
                     marginLeft: "auto",
                     marginRight: "auto",
                   }}
@@ -228,7 +229,6 @@ function Comments() {
                 <div
                   className="gallery-box-layout1"
                   style={{
-                    width: 300,
                     marginLeft: "auto",
                     marginRight: "auto",
                   }}
@@ -261,7 +261,6 @@ function Comments() {
                 <div
                   className="gallery-box-layout1"
                   style={{
-                    width: 300,
                     marginLeft: "auto",
                     marginRight: "auto",
                   }}
@@ -293,7 +292,6 @@ function Comments() {
                 <div
                   className="gallery-box-layout1"
                   style={{
-                    width: 300,
                     marginLeft: "auto",
                     marginRight: "auto",
                   }}

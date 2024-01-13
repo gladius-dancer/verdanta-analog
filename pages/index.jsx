@@ -682,7 +682,7 @@ const Index = () => {
         modalClass={cls.Modal}
       >
         <div className={cls.ModalContainer}>
-          <img src={gallery.find((item) => item.id === modal.id)?.image} />
+          <img src={gallery?.find((item) => item.id === modal.id)?.image} />
         </div>
       </Modal>
     </MainController>
