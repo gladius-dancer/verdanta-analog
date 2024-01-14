@@ -6,6 +6,7 @@ import drawerReducer from "./slices/drawerSlice";
 import loaderReducer from "./slices/loaderSlice";
 import doctorsReducer from "./slices/doctorsSlice";
 import galleryReducer from "./slices/gallerySlice";
+import statReducer from "./slices/statisticsSlice";
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ export const store = configureStore({
     loader: loaderReducer,
     doctors: doctorsReducer,
     gallery: galleryReducer,
+    statistics: statReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

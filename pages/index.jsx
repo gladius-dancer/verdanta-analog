@@ -20,6 +20,7 @@ import { GetGalleryService } from "@/services/gallery/GetGalleryService";
 import Link from "next/link";
 import Modal from "@/components/Modal/Modal";
 import cls from "@/components/Modal/Modal.module.css";
+import { GetStatisticsService } from "@/services/statistics/StatisticsService";
 
 const Index = () => {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -28,6 +29,7 @@ const Index = () => {
   const dispatch = useDispatch();
   const doctors = useSelector((state) => state?.doctors?.doctors);
   const gallery = useSelector((state) => state?.gallery?.gallery);
+  const stat = useSelector((state) => state?.statistics?.statistics);
   const [modal, setModal] = useState({ status: false, id: null });
 
   const mainAfterChange = (currentSlide) => {
@@ -77,6 +79,7 @@ const Index = () => {
     setDomLoaded(true);
     dispatch(GetDoctorsService());
     dispatch(GetGalleryService());
+    dispatch(GetStatisticsService());
   }, []);
   return (
     <MainController>
@@ -497,7 +500,7 @@ const Index = () => {
             <div className="progress-box-layout2 col-md-4">
               <div className="inner-item">
                 <div className="counting-text counter" data-num="15">
-                  8
+                  {stat[stat.length - 1]?.doctors}
                 </div>
                 <p>Опытных врачей</p>
               </div>
@@ -505,7 +508,7 @@ const Index = () => {
             <div className="progress-box-layout2 col-md-4">
               <div className="inner-item">
                 <div className="counting-text counter" data-num="60000">
-                  200
+                  {stat[stat.length - 1]?.patients}
                 </div>
                 <p>Пациентов</p>
               </div>
@@ -513,7 +516,7 @@ const Index = () => {
             <div className="progress-box-layout2 col-md-4">
               <div className="inner-item">
                 <div className="counting-text counter" data-num="20000">
-                  50
+                  {stat[stat.length - 1]?.operations}
                 </div>
                 <p>Проведенных операций</p>
               </div>
