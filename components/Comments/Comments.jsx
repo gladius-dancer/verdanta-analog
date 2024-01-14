@@ -21,7 +21,7 @@ function Comments() {
     >
       <div className="container">
         <div className="section-heading heading-dark text-center heading-layout1">
-          <h2>Отзывы и Комментарий</h2>
+          <h2>Отзывы пациентов</h2>
           <p></p>
         </div>
         <Swiper
