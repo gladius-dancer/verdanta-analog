@@ -129,7 +129,7 @@ const Index = () => {
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="../static/images/ayziya/imgonline-com-ua-Resize-WLaOA6pkcGM7GQ27.jpg"
+                src="../static/images/ayziya/imgonline-com-ua-Resize-F2IisRZBhbgfmPk.jpg"
                 alt="slider"
               />
               <div id="slider-direction-1" className="t-cn slider-direction">
