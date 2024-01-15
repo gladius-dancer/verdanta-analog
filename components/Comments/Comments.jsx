@@ -317,6 +317,105 @@ function Comments() {
               </div>
             </div>
           </SwiperSlide>
+
+          <SwiperSlide>
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/IMG_4381.MP4"
+                    poster="../../static/images/ayziya/222233333.png"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({ id: "IMG_4381.MP4", status: true })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/IMG_4954.MP4"
+                    poster="../../static/images/ayziya/11111222333.png"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({ id: "IMG_4954.MP4", status: true })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className={cls.sliderItem}>
+              <div className="featuredContainer zoom-gallery">
+                <div
+                  className="gallery-box-layout1"
+                  style={{
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <video
+                    className=""
+                    src="../../static/video/IMG_4850.MP4"
+                    poster="../../static/images/ayziya/11111222.png"
+                  ></video>
+                  <div
+                    className="item-content"
+                    onClick={() =>
+                      setModal({ id: "IMG_4850.MP4", status: true })
+                    }
+                  >
+                    <h3 className="item-title">
+                      <img
+                        style={{ width: 50, height: "auto", marginTop: 15 }}
+                        src="../../static/images/owl.video.play.png"
+                      />
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
       <Modal
