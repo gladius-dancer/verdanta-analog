@@ -106,6 +106,41 @@ const Reviews = () => {
                 </div>
               </div>
             ))}
+            {reviews?.results.map((review) => (
+              <div className={cls.sliderItem} style={{ height: 177 }}>
+                <div className="featuredContainer zoom-gallery">
+                  <div
+                    className="gallery-box-layout1"
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                    }}
+                  >
+                    <video className="" src={review.video}></video>
+                    <div
+                      className="item-content"
+                      onClick={() =>
+                        setModal({
+                          url: review.video,
+                          status: true,
+                        })
+                      }
+                    >
+                      <h3 className="item-title">
+                        <img
+                          style={{
+                            width: 50,
+                            height: "auto",
+                            marginTop: 15,
+                          }}
+                          src="../../static/images/owl.video.play.png"
+                        />
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
           <ul className="pagination-layout1 margin-t-50">
