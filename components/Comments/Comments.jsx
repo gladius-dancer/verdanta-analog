@@ -101,6 +101,8 @@ function Comments() {
             display: "flex",
             justifyContent: "flex-end",
             paddingTop: 20,
+            paddingLeft: 12,
+            paddingRight: 12,
           }}
         >
           <Link href="/reviews">Все отзывы</Link>
