@@ -3,7 +3,7 @@
 }*/
 
 /*=======================================================================
-[01] Typography 
+[01] Typography
 =========================================================================*/
 @import url(../../../../../fonts.googleapis.com/css_16e7ed6d.css);
 html {
@@ -8190,26 +8190,22 @@ div ~ :last-child .call-to-action-box-layout5 {
   transition: all 0.5s ease-out;
 }
 .pagination-layout1 li:hover {
-  background-color: #396cf0;
-  border-top: 1px solid #396cf0;
-  border-bottom: 1px solid #396cf0;
-  border-left: 1px solid #396cf0;
+  background-color: #007bff;
+  color: #FFFFFF;
 }
-.pagination-layout1 li:hover:last-child {
-  border-right: 1px solid #396cf0;
-}
+
 .pagination-layout1 li:hover a {
   color: #ffffff;
 }
-.pagination-layout1 .active {
-  background-color: #396cf0;
-  border-top: 1px solid #396cf0;
-  border-bottom: 1px solid #396cf0;
-  border-left: 1px solid #396cf0;
-}
-.pagination-layout1 .active:last-child {
-  border-right: 1px solid #396cf0;
-}
+/*.pagination-layout1 .active {*/
+/*  background-color: #396cf0;*/
+/*  border-top: 1px solid #396cf0;*/
+/*  border-bottom: 1px solid #396cf0;*/
+/*  border-left: 1px solid #396cf0;*/
+/*}*/
+/*.pagination-layout1 .active:last-child {*/
+/*  border-right: 1px solid #396cf0;*/
+/*}*/
 .pagination-layout1 .active a {
   color: #ffffff;
 }
@@ -8337,7 +8333,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   color: #ffffff;
 }
 /*=======================================================================
-[19] Comingsoon Page Style        
+[19] Comingsoon Page Style
 =========================================================================*/
 .comingsoon-page {
   text-align: center;
@@ -8629,7 +8625,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   font-size: 15px;
 }
 /*=======================================================================
-[20] Appointment Page Style        
+[20] Appointment Page Style
 =========================================================================*/
 .appointment-wrap-layout1 {
   padding: 10rem 0;
@@ -8751,7 +8747,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   box-shadow: inherit;
 }
 /*=======================================================================
-[21] Contact Page Style        
+[21] Contact Page Style
 =========================================================================*/
 .contact-wrap-layout {
   padding: 10rem 0px;
@@ -8873,7 +8869,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   margin-bottom: 0;
 }
 /*=======================================================================
-[22] Faq Page Style        
+[22] Faq Page Style
 =========================================================================*/
 .faq-wrap-layout1 {
   padding: 8.5rem 0rem 10rem;
@@ -9121,7 +9117,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   box-shadow: inherit;
 }
 /*=======================================================================
-[23] Error Page Style        
+[23] Error Page Style
 =========================================================================*/
 .error-wrap-layout1 {
   padding: 17rem 0px;
@@ -10845,7 +10841,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   color: #396cf0;
 }
 /*=======================================================================
-[28] Preloader Style        
+[28] Preloader Style
 =========================================================================*/
 #preloader {
   background: #ffffff url('../images/preloader.gif') no-repeat scroll center center;
@@ -11298,7 +11294,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   color: #ffffff !important;
 }
 /*=======================================================================
-[33] Animation Style        
+[33] Animation Style
 =========================================================================*/
 @keyframes toBottomFromTop {
   49% {
@@ -11385,7 +11381,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   }
   .nivoSlider img{
     height: 450px;
-  } 
+  }
 }
 @media only screen and (max-width: 800px){
   .nivoSlider {
@@ -11393,7 +11389,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   }
   .nivoSlider img{
     height: 350px;
-  } 
+  }
 }
 @media only screen and (max-width: 600px){
   .nivoSlider {
@@ -11401,7 +11397,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   }
   .nivoSlider img{
     height: 250px;
-  } 
+  }
 }
 @media only screen and (max-width: 400px){
   .nivoSlider {
@@ -11409,7 +11405,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   }
   .nivoSlider img{
     height: 150px;
-  } 
+  }
 }
 @media only screen and (max-width: 991px){
   .slider-content{

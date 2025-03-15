@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -10,9 +10,20 @@ import "swiper/css/thumbs";
 import cls from "./Comments.module.scss";
 import clsModal from "@/components/Modal/Modal.module.css";
 import Modal from "@/components/Modal/Modal";
+import Link from "next/link";
+import { GetReviewsService } from "@/services/reviews/GetReviewsService";
+import { useDispatch, useSelector } from "react-redux";
 
 function Comments() {
-  const [modal, setModal] = useState({ status: false, id: null });
+  const [modal, setModal] = useState({ status: false, url: null });
+  const [domLoaded, setDomLoaded] = useState(false);
+  const dispatch = useDispatch();
+  const reviews = useSelector((state) => state.reviews.reviews);
+
+  useEffect(() => {
+    setDomLoaded(true);
+    dispatch(GetReviewsService({ page: 1 }));
+  }, []);
 
   return (
     <section
@@ -31,9 +42,9 @@ function Comments() {
           slidesPerView={1}
           loop={true}
           /* autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}*/
+              delay: 3000,
+              disableOnInteraction: false,
+            }}*/
           breakpoints={{
             // when window width is >= 640px
             1199: {
@@ -51,376 +62,53 @@ function Comments() {
             },
           }}
         >
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/video_2024-01-13_13-46-07.mp4"
-                  ></video>
+          {reviews?.results.map((review) => (
+            <SwiperSlide>
+              <div className={cls.sliderItem}>
+                <div className="featuredContainer zoom-gallery">
                   <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({
-                        id: "video_2024-01-13_13-46-07.mp4",
-                        status: true,
-                      })
-                    }
+                    className="gallery-box-layout1"
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                    }}
                   >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
+                    <video className="" src={review.video}></video>
+                    <div
+                      className="item-content"
+                      onClick={() =>
+                        setModal({
+                          url: review.video,
+                          status: true,
+                        })
+                      }
+                    >
+                      <h3 className="item-title">
+                        <img
+                          style={{ width: 50, height: "auto", marginTop: 15 }}
+                          src="../../static/images/owl.video.play.png"
+                        />
+                      </h3>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/video_2024-01-13_13-45-35.mp4"
-                  ></video>
-                  <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({
-                        id: "video_2024-01-13_13-45-35.mp4",
-                        status: true,
-                      })
-                    }
-                  >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/video_2024-01-13_13-44-53.mp4"
-                  ></video>
-                  <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({
-                        id: "video_2024-01-13_13-44-53.mp4",
-                        status: true,
-                      })
-                    }
-                  >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/video_2024-01-13_13-45-47.mp4"
-                  ></video>
-                  <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({
-                        id: "video_2024-01-13_13-45-47.mp4",
-                        status: true,
-                      })
-                    }
-                  >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/IMG_5058.MP4"
-                  ></video>
-                  <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({ id: "IMG_5058.MP4", status: true })
-                    }
-                  >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/IMG_5341.MP4"
-                  ></video>
-                  <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({ id: "IMG_5341.MP4", status: true })
-                    }
-                  >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/IMG_4966.MP4"
-                  ></video>
-                  <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({ id: "IMG_4966.MP4", status: true })
-                    }
-                  >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/IMG_5252.MP4"
-                  ></video>
-                  <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({ id: "IMG_5252.MP4", status: true })
-                    }
-                  >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/IMG_4381.MP4"
-                    poster="../../static/images/ayziya/222233333.png"
-                  ></video>
-                  <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({ id: "IMG_4381.MP4", status: true })
-                    }
-                  >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/IMG_4954.MP4"
-                    poster="../../static/images/ayziya/11111222333.png"
-                  ></video>
-                  <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({ id: "IMG_4954.MP4", status: true })
-                    }
-                  >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className={cls.sliderItem}>
-              <div className="featuredContainer zoom-gallery">
-                <div
-                  className="gallery-box-layout1"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                  }}
-                >
-                  <video
-                    className=""
-                    src="../../static/video/IMG_4850.MP4"
-                    poster="../../static/images/ayziya/11111222.png"
-                  ></video>
-                  <div
-                    className="item-content"
-                    onClick={() =>
-                      setModal({ id: "IMG_4850.MP4", status: true })
-                    }
-                  >
-                    <h3 className="item-title">
-                      <img
-                        style={{ width: 50, height: "auto", marginTop: 15 }}
-                        src="../../static/images/owl.video.play.png"
-                      />
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            paddingTop: 20,
+          }}
+        >
+          <Link href="/reviews">Все отзывы</Link>
+        </div>
       </div>
       <Modal
         isOpen={modal.status}
-        onRequestClose={() => setModal({ id: null, status: false })}
+        onRequestClose={() => setModal({ url: null, status: false })}
         modalClass={clsModal.Modal}
       >
         <div className={clsModal.ModalContainer}>
@@ -428,7 +116,7 @@ function Comments() {
             autoPlay={true}
             controls
             className={clsModal.video}
-            src={`../../static/video/${modal.id}`}
+            src={modal.url}
           ></video>
         </div>
       </Modal>
